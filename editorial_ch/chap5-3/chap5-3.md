@@ -10,4 +10,4 @@
 
 | 問題 | C++ | Python | JAVA | C |
 |:---:|:---:|:---:|:---:|:---:|
-| 節末問題 5.3.1 | [連結](https://github.com/E869120/math-algorithm-book/blob/main/editorial/chap5-3/prob5-3-1.cpp) | [連結](https://github.com/E869120/math-algorithm-book/blob/main/editorial/chap5-3/prob5-3-1.py) | [連結](https://github.com/E869120/math-algorithm-book/blob/main/editorial/chap5-3/prob5-3-1.java) | [連結](https://github.com/E869120/math-algorithm-book/blob/main/editorial/chap5-3/prob5-3-1.c) |
+| 節末問題 5.3.1 | [連結](https://github.com/facespublications/math-algorithm-book_tw/blob/main/editorial_ch/chap5-3/prob5-3-1.cpp) | [連結](https://github.com/facespublications/math-algorithm-book_tw/blob/main/editorial_ch/chap5-3/prob5-3-1.py) | [連結](https://github.com/facespublications/math-algorithm-book_tw/blob/main/editorial_ch/chap5-3/prob5-3-1.java) | [連結](https://github.com/facespublications/math-algorithm-book_tw/blob/main/editorial_ch/chap5-3/prob5-3-1.c) |
