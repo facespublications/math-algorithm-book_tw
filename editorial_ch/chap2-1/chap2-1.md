@@ -1,6 +1,6 @@
 ## 節末問題 2.1 的解答
 
-解答 PDF：[https://github.com/E869120/math-algorithm-book/blob/main/editorial/chap2-1/chap2-1.pdf](https://github.com/E869120/math-algorithm-book/blob/main/editorial/chap2-1/chap2-1.pdf)
+解答 PDF：[https://github.com/facespublications/math-algorithm-book_tw/blob/main/editorial/chap2-1/chap2-1.pdf](https://github.com/facespublications/math-algorithm-book_tw/blob/main/editorial/chap2-1/chap2-1.pdf)
 
 <br />
 
