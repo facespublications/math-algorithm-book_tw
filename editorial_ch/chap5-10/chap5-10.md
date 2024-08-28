@@ -1,6 +1,6 @@
 ## 節末問題 5.10 的解答
 
-解答 PDF：[https://github.com/E869120/math-algorithm-book/blob/main/editorial/chap5-10/chap5-10.pdf](https://github.com/E869120/math-algorithm-book/blob/main/editorial/chap5-10/chap5-10.pdf)
+解答 PDF：[https://github.com/facespublications/math-algorithm-book_tw/blob/main/editorial_ch/chap5-10/chap5-10.pdf](https://github.com/facespublications/math-algorithm-book_tw/blob/main/editorial_ch/chap5-10/chap5-10.pdf)
 
 <br />
 
