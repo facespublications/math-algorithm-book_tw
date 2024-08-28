@@ -1,6 +1,6 @@
 ## 節末問題 4.6 的解答
 
-解答 PDF：[https://github.com/E869120/math-algorithm-book/blob/main/editorial/chap4-6/chap4-6.pdf](https://github.com/E869120/math-algorithm-book/blob/main/editorial/chap4-6/chap4-6.pdf)
+解答 PDF：[https://github.com/facespublications/math-algorithm-book_tw/blob/main/editorial_ch/chap4-6/chap4-6.pdf](https://github.com/facespublications/math-algorithm-book_tw/blob/main/editorial_ch/chap4-6/chap4-6.pdf)
 
 <br />
 
