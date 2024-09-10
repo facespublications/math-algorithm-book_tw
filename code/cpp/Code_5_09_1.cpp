@@ -2,11 +2,11 @@
 using namespace std;
 
 int main() {
-	// “ü—Í
+	// è¼¸å…¥
 	long long N, Answer = 0;
 	cin >> N;
 
-	// Žx•¥‚¢•û‚ÌƒVƒ~ƒ…ƒŒ[ƒVƒ‡ƒ“ ¨ “š‚¦‚Ìo—Í
+	// æ”¯ä»˜æ–¹å¼çš„æ¨¡æ“¬ â†’ è¼¸å‡ºç­”æ¡ˆ
 	while (N >= 10000) { N -= 10000; Answer += 1; }
 	while (N >= 5000) { N -= 5000; Answer += 1; }
 	while (N >= 1) { N -= 1000; Answer += 1; }
