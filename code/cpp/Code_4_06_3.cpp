@@ -2,7 +2,7 @@
 using namespace std;
 
 const long long mod = 1000000007;
-long long a, b, Answer = 1; // a ‚Ì 0 æ‚Í 1 ‚È‚Ì‚ÅAAnswer=1 ‚É‰Šú‰»‚µ‚Ä‚¨‚­
+long long a, b, Answer = 1; // aã€€çš„ 0 æ¬¡æ–¹ç‚º 1ï¼Œå› æ­¤åˆå§‹åŒ–æˆ Answer=1
 
 int main() {
 	cin >> a >> b;
