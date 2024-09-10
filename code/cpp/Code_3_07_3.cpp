@@ -6,25 +6,25 @@ long long N, W, w[109], v[109];
 long long dp[109][100009];
 
 int main() {
-	// “ü—Í
+	// è¼¸å…¥
 	cin >> N >> W;
 	for (int i = 1; i <= N; i++) cin >> w[i] >> v[i];
 
-	// ”z—ñ‚Ì‰Šú‰»
+	// é™£åˆ—çš„åˆå§‹åŒ–
 	dp[0][0] = 0;
 	for (int i = 1; i <= W; i++) dp[0][i] = -(1LL << 60);
 
-	// “®“IŒv‰æ–@
+	// å‹•æ…‹è¦åŠƒæ³•
 	for (int i = 1; i <= N; i++) {
 		for (int j = 0; j <= W; j++) {
-			// j<w[i] ‚Ì‚Æ‚«A•û–@ B ‚ğ‚Æ‚é‘I‚Ñ•û‚ª‚Å‚«‚È‚¢
+			// j<w[i] æ™‚ï¼Œç„¡æ³•ç”¨æ–¹æ³•B çš„é¸æ“‡æ–¹æ³•
 			if (j < w[i]) dp[i][j] = dp[i - 1][j];
-			// j>=w[i] ‚Ì‚Æ‚«A•û–@ AE•û–@ B ‚Ç‚¿‚ç‚à‘I‚×‚é
+			// j > = w[i-1] æ™‚ï¼Œå¯ä»¥é¸æ“‡æ–¹æ³• Aã€æ–¹æ³• B çš„ä»»ä¸€å€‹
 			if (j >= w[i]) dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - w[i]] + v[i]);
 		}
 	}
 
-	// “š‚¦‚ğo—Í
+	// è¼¸å‡ºç­”æ¡ˆ
 	long long Answer = 0;
 	for (int i = 0; i <= W; i++) Answer = max(Answer, dp[N][i]);
 	cout << Answer << endl;
