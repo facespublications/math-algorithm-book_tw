@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 long long modpow(long long a, long long b, long long m) {
-	// 繰り返し二乗法（p は a^1, a^2, a^4, a^8, ... といった値をとる）
+	// 重複平方法（p 取 a^1、a^2、 a^4、a^8、⋯的值）
 	long long p = a, answer = 1;
 	int i;
 	for (i = 0; i < 30; i++) {
