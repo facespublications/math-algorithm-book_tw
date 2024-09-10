@@ -6,11 +6,11 @@ int N, depth = 0;
 string S;
 
 int main() {
-	// “ü—Í
+	// è¼¸å…¥
 	cin >> N >> S;
 
-	// '(' ‚Ì” - ')' ‚Ì”‚ð depth ‚Æ‚·‚é
-	// “r’†‚Å depth ‚ª•‰‚É‚È‚Á‚½‚ç‚±‚ÌŽž“_‚Å No
+	// ä»¤'(' çš„æ•¸é‡-')' çš„æ•¸é‡ç‚ºdepth
+	// å¦‚æžœdepth åœ¨éŽç¨‹ä¸­è®Šç‚ºè² çš„è©±ï¼Œæ­¤æ™‚ç‚ºNo
 	for (int i = 0; i < N; i++) {
 		if (S[i] == '(') depth += 1;
 		if (S[i] == ')') depth -= 1;
@@ -20,7 +20,7 @@ int main() {
 		}
 	}
 
-	// ÅŒãAdepth = 0 ['(' ‚Æ ')' ‚Ì”‚ª“¯‚¶] ‚©‚Ç‚¤‚©‚Åê‡•ª‚¯
+	// æœ€å¾Œï¼Œæ ¹æ“šæ˜¯å¦depth=0['(' å’Œ')' çš„æ•¸é‡ç›¸åŒ] ä¾†å€åˆ†æƒ…æ³
 	if (depth == 0) cout << "Yes" << endl;
 	else cout << "No" << endl;
 	return 0;
