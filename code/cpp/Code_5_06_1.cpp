@@ -3,10 +3,10 @@ using namespace std;
 
 int A, B, Answer = 0;
 
-// ¬–â‘è t ‚ğ‰ğ‚­ŠÖ”
+// æ±‚è§£å°å•é¡Œ t çš„å‡½å¼
 bool shou_mondai(int t) {
-	int cl = (A + t - 1) / t; // A€t ‚Ì¬”“_ˆÈ‰ºØ‚èã‚°
-	int cr = B / t; // B€t ‚Ì¬”“_ˆÈ‰ºØ‚èÌ‚Ä
+	int cl = (A + t - 1) / t; // å°‡ AÃ·t çš„å°æ•¸é»ä»¥ä¸‹é€²ä½
+	int cr = B / t; // å°‡ã€€BÃ·t çš„å°æ•¸é»ä»¥ä¸‹æ¨å»
 	if (cr - cl >= 1) return true;
 	return false;
 }
