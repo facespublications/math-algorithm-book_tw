@@ -4,7 +4,7 @@ using namespace std;
 int main() {
 	long long N;
 	cin >> N;
-	if (N % 4 == 0) cout << "Second" << endl; // ŒãŽè•KŸ
-	else cout << "First" << endl; // æŽè•KŸ
+	if (N % 4 == 0) cout << "Second" << endl; // å¾Œæ‰‹å¿…å‹
+	else cout << "First" << endl; // Âå…ˆæ‰‹å¿…å‹
 	return 0;
 }
