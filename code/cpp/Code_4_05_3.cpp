@@ -8,7 +8,7 @@ int dist[100009];
 vector<int> G[100009];
 
 int main() {
-	// “ü—Í
+	// è¼¸å…¥
 	cin >> N >> M;
 	for (int i = 1; i <= M; i++) {
 		cin >> A[i] >> B[i];
@@ -16,25 +16,25 @@ int main() {
 		G[B[i]].push_back(A[i]);
 	}
 
-	// •—Dæ’Tõ‚Ì‰Šú‰»idist[i]=-1 ‚Ì‚Æ‚«A–¢“ž’B‚Ì”’F’¸“_‚Å‚ ‚éj
+	// å»£åº¦å„ªå…ˆæœå°‹çš„åˆå§‹åŒ–ï¼ˆdist[i]=-1 æ™‚ï¼Œç‚ºæœªåˆ°é”çš„ç™½è‰²é ‚é»žï¼‰
 	for (int i = 1; i <= N; i++) dist[i] = -1;
-	queue<int> Q; // ƒLƒ…[ Q ‚ð’è‹`‚·‚é
-	Q.push(1); dist[1] = 0; // Q ‚É 1 ‚ð’Ç‰Ái‘€ì 1j
+	queue<int> Q; // å®šç¾©ä½‡åˆ—Q
+	Q.push(1); dist[1] = 0; // å°‡ 1 æ·»åŠ åˆ° Q ä¸­ï¼ˆæ“ä½œ 1ï¼‰
 
-	// •—Dæ’Tõ
+	// å»£åº¦å„ªå…ˆæœå°‹
 	while (!Q.empty()) {
-		int pos = Q.front(); // Q ‚Ìæ“ª‚ð’²‚×‚éi‘€ì 2j
-		Q.pop(); // Q ‚Ìæ“ª‚ðŽæ‚èo‚·i‘€ì 3j
+		int pos = Q.front(); // æŸ¥çœ‹ Q çš„é–‹é ­ï¼ˆæ“ä½œ2ï¼‰
+		Q.pop(); // å–å‡ºQ çš„é–‹é ­ï¼ˆæ“ä½œ3ï¼‰
 		for (int i = 0; i < (int)G[pos].size(); i++) {
 			int nex = G[pos][i];
 			if (dist[nex] == -1) {
 				dist[nex] = dist[pos] + 1;
-				Q.push(nex); // Q ‚É nex ‚ð’Ç‰Ái‘€ì 1j
+				Q.push(nex); // å°‡ã€€nex æ·»åŠ åˆ°Q ä¸­ï¼ˆæ“ä½œ 1ï¼‰
 			}
 		}
 	}
 
-	// ’¸“_ 1 ‚©‚çŠe’¸“_‚Ü‚Å‚ÌÅ’Z‹——£‚ðo—Í
+	// è¼¸å‡ºå¾žé ‚é»žã€€1 åˆ°å„é ‚é»žçš„æœ€çŸ­è·é›¢
 	for (int i = 1; i <= N; i++) cout << dist[i] << endl;
 	return 0;
 }
