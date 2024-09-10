@@ -4,11 +4,11 @@
 using namespace std;
 
 int main() {
-	// “ü—Í
+	// è¼¸å…¥
 	int N, K;
 	cin >> N >> K;
 
-	// Ž–Û B ‚ÌŒÂ” yojishou ‚ð”‚¦‚é ¨ “š‚¦‚Ìo—Í
+	// ç®—å‡ºäº‹ä»¶ B çš„å€‹æ•¸ yojishou â†’ è¼¸å‡ºç­”æ¡ˆ
 	long long yojishou = 0;
 	for (int a = 1; a <= N; a++) {
 		for (int b = max(1, a - (K - 1)); b <= min(N, a + (K - 1)); b++) {
