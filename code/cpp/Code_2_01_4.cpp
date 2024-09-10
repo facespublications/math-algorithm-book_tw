@@ -3,17 +3,17 @@
 using namespace std;
 
 int N;
-string Answer = ""; // string ‚Í•¶Žš—ñŒ^
+string Answer = ""; // string ç‚ºå­—ä¸²åž‹åˆ¥
 
 int main() {
-	cin >> N; // “ü—Í•”•ª
+	cin >> N; // è¼¸å…¥éƒ¨åˆ†
 	while (N >= 1) {
-		// N % 2 ‚Í N ‚ð 2 ‚ÅŠ„‚Á‚½—]‚èi—áFN=13 ‚Ìê‡ 1j
-		// N / 2 ‚Í N ‚ð 2 ‚ÅŠ„‚Á‚½’l‚Ì®”•”•ªi—áFN=13 ‚Ìê‡ 6j
+		// N % 2 ç‚º N é™¤ä»¥ 2 çš„é¤˜æ•¸ï¼ˆä¾‹å¦‚ï¼šN=13 æ™‚ç‚º1ï¼‰
+		// N / 2 ç‚º N é™¤ä»¥ 2 çš„å€¼çš„æ•´æ•¸éƒ¨åˆ†ï¼ˆä¾‹å¦‚ï¼šN=13 æ™‚ç‚º6ï¼‰
 		if (N % 2 == 0) Answer = "0" + Answer;
 		if (N % 2 == 1) Answer = "1" + Answer;
 		N = N / 2;
 	}
-	cout << Answer << endl; // o—Í•”•ª
+	cout << Answer << endl; // è¼¸å‡ºéƒ¨åˆ†
 	return 0;
 }
