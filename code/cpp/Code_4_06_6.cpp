@@ -25,11 +25,11 @@ long long ncr(int n, int r) {
 }
 
 int main() {
-	// 配列の初期化（fact[i] は i の階乗を 1000000007 で割った余り）
+	// 陣列初始化（fact[i] 是i 的階乘除以10000007 的餘數）
 	fact[0] = 1;
 	for (int i = 1; i <= 200000; i++) fact[i] = 1LL * i * fact[i - 1] % mod;
 
-	// 入力 → 答えの出力
+	// 輸入→答案輸出
 	cin >> X >> Y;
 	cout << ncr(X + Y, Y) << endl;
 	return 0;
