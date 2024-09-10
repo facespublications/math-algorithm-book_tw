@@ -5,7 +5,7 @@ const long long mod = 1000000007;
 int X, Y;
 
 long long modpow(long long a, long long b, long long m) {
-	// ŒJ‚è•Ô‚µ“ñæ–@ip ‚Í a^1, a^2, a^4, a^8, ... ‚Æ‚¢‚Á‚½’l‚ð‚Æ‚éj
+	// é‡è¤‡å¹³æ–¹æ³•ï¼ˆp å– a^1ã€a^2ã€ a^4ã€a^8ã€â‹¯çš„å€¼ï¼‰
 	long long p = a, Answer = 1;
 	for (int i = 0; i < 30; i++) {
 		if ((b & (1 << i)) != 0) { Answer *= p; Answer %= m; }
@@ -14,22 +14,22 @@ long long modpow(long long a, long long b, long long m) {
 	return Answer;
 }
 
-// Division(a, b, m) ‚Í a€b mod m ‚ð•Ô‚·ŠÖ”
+// Division(a, b, m) æ˜¯å›žå‚³ã€€aÃ·b mod m çš„å‡½å¼é–¢
 long long Division(long long a, long long b, long long m) {
 	return (a * modpow(b, m - 2, m)) % m;
 }
 
 int main() {
-	// “ü—Í
+	// è¼¸å…¥
 	cin >> X >> Y;
 
-	// “ñ€ŒW”‚Ì•ªŽq‚Æ•ª•ê‚ð‹‚ß‚éiŽè‡ 1.^Žè‡ 2.j
+	// æ±‚å‡ºäºŒé …ä¿‚æ•¸çš„åˆ†å­å’Œåˆ†æ¯ï¼ˆæ­¥é©Ÿ1./ æ­¥é©Ÿ2.ï¼‰
 	long long bunshi = 1, bunbo = 1;
 	for (int i = 1; i <= X + Y; i++) { bunshi *= i; bunshi %= mod; }
 	for (int i = 1; i <= X; i++) { bunbo *= i; bunbo %= mod; }
 	for (int i = 1; i <= Y; i++) { bunbo *= i; bunbo %= mod; }
 
-	// “š‚¦‚ð‹‚ß‚éiŽè‡ 3.j
+	// æ±‚å‡ºç­”æ¡ˆï¼ˆæ­¥é©Ÿ3.ï¼‰
 	cout << Division(bunshi, bunbo, mod) << endl;
 	return 0;
 }
