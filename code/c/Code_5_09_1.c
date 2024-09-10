@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main() {
-	// 入力
+	// 輸入
 	long long N;
 	scanf("%lld", &N);
 
-	// 支払い方のシミュレーション
+	// 支付方式的模擬
 	long long answer = 0;
 	while (N >= 10000) {
 		N -= 10000;
@@ -20,7 +20,7 @@ int main() {
 		answer += 1;
 	}
 	
-	// 答えの出力
+	// 輸出答案
 	printf("%lld\n", answer);
 	return 0;
 }
