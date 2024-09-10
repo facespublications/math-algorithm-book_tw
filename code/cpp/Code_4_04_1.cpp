@@ -5,18 +5,18 @@ int N;
 bool prime[100000009];
 
 int main() {
-	// “ü—Í ¨ ”z—ñ‚Ì‰Šú‰»
+	// è¼¸å…¥â†’é™£åˆ—çš„åˆå§‹åŒ–
 	cin >> N;
 	for (int i = 2; i <= N; i++) prime[i] = true;
 
-	// ƒGƒ‰ƒgƒXƒeƒlƒX‚Ì‚Ó‚é‚¢
+	// åŸƒæ‹‰æ‰˜æ–¯ç‰¹å°¼ç¯©
 	for (int i = 2; i * i <= N; i++) {
 		if (prime[i] == true) {
 			for (int x = 2 * i; x <= N; x += i) prime[x] = false;
 		}
 	}
 
-	// N ˆÈ‰º‚Ì‘f”‚ð¬‚³‚¢‡‚Éo—Í
+	// å°‡ N ä»¥ä¸‹çš„è³ªæ•¸ä»¥å¾žå°åˆ°å¤§çš„é †åºè¼¸å‡º
 	for (int i = 2; i <= N; i++) {
 		if (prime[i] == true) cout << i << endl;
 	}
