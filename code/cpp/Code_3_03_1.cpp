@@ -5,11 +5,11 @@ int N, A[109];
 int Answer = 0;
 
 int main() {
-	// ����
+	// 輸入
 	cin >> N;
 	for (int i = 1; i <= N; i++) cin >> A[i];
 
-	// 5 �̃J�[�h�̔ԍ� (i, j, k, l, m) ��S�T��
+	// 對 5 張卡片的編號(i, j, k, l, m) 進行全搜尋
 	for (int i = 1; i <= N; i++) {
 		for (int j = i + 1; j <= N; j++) {
 			for (int k = j + 1; k <= N; k++) {
@@ -22,7 +22,7 @@ int main() {
 		}
 	}
 
-	// �����̏o��
+	// 答案的輸出
 	cout << Answer << endl;
 	return 0;
 }
