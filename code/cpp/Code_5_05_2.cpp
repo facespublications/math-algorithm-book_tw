@@ -3,31 +3,31 @@
 using namespace std;
 
 long long N, K, X[59], Y[59];
-long long Answer = (1LL << 62); // ‚ ‚è“¾‚È‚¢’l‚Éİ’è
+long long Answer = (1LL << 62); // è¨­å®šæˆä¸å¯èƒ½çš„å€¼
 
 int check_numpoints(int lx, int rx, int ly, int ry) {
 	int cnt = 0;
 	for (int i = 1; i <= N; i++) {
-		// “_ (X[i], Y[i]) ‚ª’·•ûŒ`‚ÉŠÜ‚Ü‚ê‚Ä‚¢‚é‚©‚Ç‚¤‚©‚ğ”»’è‚·‚é
+		// åˆ¤å®šé•·æ–¹å½¢ä¸­æ˜¯å¦åŒ…å«é»(X[i],Y[i])
 		if (lx <= X[i] && X[i] <= rx && ly <= Y[i] && Y[i] <= ry) cnt++;
 	}
 	return cnt;
 }
 
 int main() {
-	// “ü—Í
+	// è¼¸å…¥
 	cin >> N >> K;
 	for (int i = 1; i <= N; i++) cin >> X[i] >> Y[i];
 
-	// ¶’[ xA‰E’[ xA‰º’[ yAã’[ y ‚ğ‘S’Tõi‚»‚ê‚¼‚ê‚Ì”Ô†‚ª i, j, k, lj
+	// å°‡å·¦ç«¯xã€å³ç«¯xã€ä¸‹ç«¯y å’Œä¸Šç«¯y é€²è¡Œå…¨æœå°‹ï¼ˆå„è‡ªçš„ç·¨è™Ÿç‚ºi,j,k,lï¼‰
 	for (int i = 1; i <= N; i++) {
 		for (int j = 1; j <= N; j++) {
 			for (int k = 1; k <= N; k++) {
 				for (int l = 1; l <= N; l++) {
-					int cl = X[i]; // ¶’[‚Ì x À•W
-					int cr = X[j]; // ‰E’[‚Ì x À•W
-					int dl = Y[k]; // ‰º’[‚Ì y À•W
-					int dr = Y[l]; // ã’[‚Ì y À•W
+					int cl = X[i]; // å·¦ç«¯çš„ x åº§æ¨™
+					int cr = X[j]; // å³ç«¯çš„ x åº§æ¨™
+					int dl = Y[k]; // ä¸‹ç«¯çš„ y åº§æ¨™
+					int dr = Y[l]; // ä¸Šç«¯çš„ y åº§æ¨™
 					if (check_numpoints(cl, cr, dl, dr) >= K) {
 						long long area = 1LL * (cr - cl) * (dr - dl);
 						Answer = min(Answer, area);
@@ -37,7 +37,7 @@ int main() {
 		}
 	}
 
-	// “š‚¦‚Ìo—Í
+	// ç­”ãˆã®å‡ºåŠ›
 	cout << Answer << endl;
 	return 0;
 }
