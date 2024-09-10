@@ -5,23 +5,23 @@ using namespace std;
 long long N, X, A[1000009];
 
 int main() {
-	// “ü—Í
+	// è¼¸å…¥
 	cin >> N >> X;
 	for (int i = 1; i <= N; i++) cin >> A[i];
 
-	// ”z—ñ‚Ìƒ\[ƒg
+	// é™£åˆ—çš„æ’åº
 	sort(A + 1, A + N + 1);
 
-	// “ñ•ª’Tõ
+	// äºŒå…ƒæœå°‹
 	int left = 1, right = N;
 	while (left <= right) {
-		int mid = (left + right) / 2; // ’Tõ”ÍˆÍ‚Ì’†‰›‚Å•ªŠ„‚·‚é
+		int mid = (left + right) / 2; // ä»¥æœå°‹ç¯„åœçš„ä¸­å¤®é€²è¡Œåˆ†å‰²
 		if (A[mid] == X) { cout << "Yes" << endl; return 0; }
-		if (A[mid] > X) right = mid - 1; // ’Tõ”ÍˆÍ‚ğ‘O”¼•”•ª‚Éi‚é
-		if (A[mid] < X) left = mid + 1; // ’Tõ”ÍˆÍ‚ğŒã”¼•”•ª‚Éi‚é
+		if (A[mid] > X) right = mid - 1; // å°‡æœå°‹ç¯„åœç¸®å°åˆ°å‰åŠéƒ¨åˆ†
+		if (A[mid] < X) left = mid + 1; // å°‡æœå°‹ç¯„åœç¸®å°åˆ°å¾ŒåŠéƒ¨åˆ†
 	}
 
-	// ’Tõ”ÍˆÍ‚ª‚È‚­‚È‚Á‚Ä‚à Yes ‚Æ‚È‚ç‚È‚¯‚ê‚Î“š‚¦‚Í No
+	// ç•¶æœå°‹ç¯„åœè€—ç›¡ä»éã€€Yes æ™‚ï¼Œç­”æ¡ˆå³ç‚ºNo
 	cout << "No" << endl;
 	return 0;
 }
