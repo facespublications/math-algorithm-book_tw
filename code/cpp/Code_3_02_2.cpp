@@ -1,8 +1,8 @@
-// GCD ‚Í Greatest Common DivisoriÅ‘åŒö–ñ”j‚Ì—ª
+// GCD æ˜¯Greatest Common Divisorï¼ˆæœ€å¤§å…¬å› æ•¸ï¼‰çš„ç¸®å¯«
 long long GCD(long long A, long long B) {
 	while (A >= 1 && B >= 1) {
-		if (A < B) B = B % A; // A < B ‚Ìê‡A‘å‚«‚¢•û B ‚ğ‘‚«Š·‚¦‚é
-		else A = A % B; // A >= B ‚Ìê‡A‘å‚«‚¢•û A ‚ğ‘‚«Š·‚¦‚é
+		if (A < B) B = B % A; // A<Bæ™‚ï¼Œæ”¹å¯«è¼ƒå¤§çš„æ•¸B
+		else A = A % B; // A >= Bæ™‚ï¼Œæ”¹å¯«è¼ƒå¤§çš„æ•¸A
 	}
 	if (A >= 1) return A;
 	return B;
