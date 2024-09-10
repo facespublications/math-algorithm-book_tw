@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// 2 以上の整数 N に対し、N が素数であれば true、素数でなければ false を返す関数
+// 設 N 為 2 以上整數，若 N 為質數則返回true，若不是質數則返回false
 bool isprime(long long N) {
 	long long i;
 	for (i = 2; i * i <= N; i++) {
