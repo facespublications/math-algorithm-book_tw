@@ -2,17 +2,17 @@
 using namespace std;
 
 int main() {
-	// “ü—Í
+	// è¼¸å…¥
 	int N, X, Y;
 	cin >> N >> X >> Y;
 
-	// “š‚¦‚ğ‹‚ß‚é
+	// æ±‚è§£
 	int cnt = 0;
 	for (int i = 1; i <= N; i++) {
-		if (i % X == 0 || i % Y == 0) cnt++; // mod ‚ÌŒvZ‚Í 2.2 ßQÆ
+		if (i % X == 0 || i % Y == 0) cnt++; // mod çš„è¨ˆç®—è«‹åƒè€ƒ 2.2 ç¯€
 	}
 
-	// o—Í
+	// è¼¸å‡º
 	cout << cnt << endl;
 	return 0;
 }
