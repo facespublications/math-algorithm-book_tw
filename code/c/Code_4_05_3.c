@@ -17,7 +17,7 @@ int main() {
 		scanf("%d%d", &A[i], &B[i]);
 	}
 	
-	// 計算各頂點的次數（步驟 1.）
+	// 計算各頂點的度（步驟 1.）
 	for (i = 1; i <= N; i++) degree[i] = 0;
 	for (i = 1; i <= M; i++) {
 		degree[A[i]] += 1;
