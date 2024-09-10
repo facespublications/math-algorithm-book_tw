@@ -1,6 +1,6 @@
-// このソースコードは、深さ優先探索 (DFS) をスタックを用いて実装したものです。
-// スタックは「一番上に要素を積む」「一番上の要素を調べる」「一番上に積まれた要素を取り除く」という 3 種類の操作ができるデータ構造です。
-// 深さ優先探索の部分は、コード 4.5.3 の queue を stack に変更したものをベースに書かれています。
+// 這個原始碼為將深度優先搜尋 (DFS) 使用了堆疊的實作例。
+// 堆疊為可進行「在最上層堆積元素」、「查找堆積在最上層的元素」、「刪除堆積在最上層的元素」三種操作的資料結構。
+// 深度優先搜尋的部分為將程式碼 4.5.3 的 queue 變更為 stack，以此為基礎撰寫。
 
 #include <stack>
 #include <vector>
@@ -12,7 +12,7 @@ vector<int> G[100009];
 bool visited[100009];
 
 int main() {
-	// 入力
+	// 輸入
 	cin >> N >> M;
 	for (int i = 1; i <= M; i++) {
 		cin >> A[i] >> B[i];
@@ -20,27 +20,27 @@ int main() {
 		G[B[i]].push_back(A[i]);
 	}
 
-	// 深さ優先探索の初期化
+	// 深度優先搜尋的初始化
 	for (int i = 1; i <= N; i++) {
 		visited[i] = false;
 	}
-	stack<int> S; // スタック S を定義する
+	stack<int> S; // 定義堆疊 S 
 	visited[1] = true;
-	S.push(1); // S に 1 を追加
+	S.push(1); // S 追加 1
 
-	// 深さ優先探索
+	// 深度優先搜尋
 	while (!S.empty()) {
-		int pos = S.top(); // S の先頭を調べる
-		S.pop(); // S の先頭を取り出す
+		int pos = S.top(); // 調查 S 的開頭
+		S.pop(); // 取出 S 的開頭
 		for (int nex : G[pos]) {
 			if (visited[nex] == false) {
 				visited[nex] = true;
-				S.push(nex); // S に nex を追加
+				S.push(nex); // 追加 nex 至 S
 			}
 		}
 	}
 
-	// 連結かどうかの判定（Answer=true のとき連結）
+	// 判定是否連通（Answer=true 時為連通）
 	bool Answer = true;
 	for (int i = 1; i <= N; i++) {
 		if (visited[i] == false) Answer = false;
