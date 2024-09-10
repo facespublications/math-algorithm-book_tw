@@ -13,8 +13,8 @@ int func2(int pos) {
 }
 
 int main() {
-	cout << func1() << endl; // u2021v‚Æo—Í
-	cout << func2(500) << endl; // u1501v‚Æo—Í
-	cout << func2(500) << endl; // u1502v‚Æo—Í
+	cout << func1() << endl; // è¼¸å‡ºã€Œ2021ã€
+	cout << func2(500) << endl; // è¼¸å‡ºã€Œ1501ã€
+	cout << func2(500) << endl; // è¼¸å‡ºã€Œ1502ã€
 	return 0;
 }
