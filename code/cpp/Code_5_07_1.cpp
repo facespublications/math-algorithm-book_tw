@@ -4,11 +4,11 @@ using namespace std;
 long long N, A[200009], Answer = 0;
 
 int main() {
-	// “ü—Í
+	// è¼¸å…¥
 	cin >> N;
 	for (int i = 1; i <= N; i++) cin >> A[i];
 
-	// “š‚¦‚ð‹‚ß‚é ¨ “š‚¦‚Ìo—Í
+	// æ±‚å‡ºç­”æ¡ˆâ†’è¼¸å‡ºç­”æ¡ˆ
 	for (int i = 1; i <= N; i++) Answer += A[i] * (-N + 2LL * i - 1LL);
 	cout << Answer << endl;
 	return 0;
