@@ -10,7 +10,7 @@ int main() {
 	cin >> N;
 	for (int i = 1; i <= N; i++) cin >> L[i] >> R[i];
 
-	// 映模擬電影的選擇方法
+	// 模擬電影的選擇方法
 	// 可觀看電影的結束時間最小值min_endtime 最初是設定成像1000000 這樣不可能的值
 	while (true) {
 		int min_endtime = 1000000;
