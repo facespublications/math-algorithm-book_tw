@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-	// 入力
+	// 輸入
 	long long N, S, A[61];
 	scanf("%lld%lld", &N, &S);
 	long long i, j;
@@ -9,12 +9,12 @@ int main() {
 		scanf("%lld", &A[i]);
 	}
 	
-	// 全パターンを探索：(1LL << N) は 2 の N 乗
+	// 搜尋全部模式：（1LL << N）為 2 的N 次方
 	for (i = 0; i < (1LL << N); i++) {
 		long long sum = 0;
 		for (j = 1; j <= N; j++) {
-			// (i & (1LL << (j-1))) != 0LL の場合、i の 2 進法表記の下から j 桁目が 1
-			// (1LL << (j-1)) は C++ では「2 の j-1 乗」を意味します
+			// (i & (1LL << (j-1))) != 0LL 時，i 的二進制表示的倒數第j 位是1
+			// (1LL << (j-1)) 在C++ 中代表「2 的j-1 次方」
 			if ((i & (1LL << (j - 1))) != 0LL) {
 				sum += A[j];
 			}
