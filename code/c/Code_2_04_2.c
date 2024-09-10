@@ -1,21 +1,21 @@
 #include <stdio.h>
 
 int main() {
-	// 入力
+	// 輸入
 	int N, X, Y;
 	scanf("%d%d%d", &N, &X, &Y);
 	
-	// 答えを求める
+	// 求解
 	int cnt = 0;
 	int i;
 	for (i = 1; i <= N; i++) {
-		// mod の計算は 2.2 節参照
+		// mod 的計算參照第2.2節
 		if (i % X == 0 || i % Y == 0) {
 			cnt += 1;
 		}
 	}
 	
-	// 出力
+	// 輸出
 	printf("%d\n", cnt);
 	
 	return 0;
