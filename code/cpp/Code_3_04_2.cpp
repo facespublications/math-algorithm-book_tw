@@ -5,11 +5,11 @@ int N, P[59], Q[59];
 double Answer = 0.0;
 
 int main() {
-	// “ü—Í
+	// è¼¸å…¥
 	cin >> N;
 	for (int i = 1; i <= N; i++) cin >> P[i] >> Q[i];
 
-	// “š‚¦‚ÌŒvŽZ ¨ “š‚¦‚Ìo—Í
+	// ç­”æ¡ˆçš„è¨ˆç®— â†’ ç­”æ¡ˆçš„è¼¸å‡º
 	for (int i = 1; i <= N; i++) {
 		Answer += 1.0 * Q[i] / P[i];
 	}
