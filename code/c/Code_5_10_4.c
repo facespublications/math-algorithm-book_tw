@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 int main() {
-	// 入力
+	// 輸入
 	int N; char S[500009];
 	scanf("%d%s", &N, S);
 
-	// '(' の数 - ')' の数を depth とする
-	// 途中で depth が負になったらこの時点で No
+	// 令'(' 的數量-')' 的數量為depth
+	// 如果depth 在過程中變為負的話，此時為No
 	int depth = 0;
 	for (int i = 0; i < N; i++) {
 		if (S[i] == '(') depth += 1;
@@ -17,7 +17,7 @@ int main() {
 		}
 	}
 
-	// 最後、depth = 0 ['(' と ')' の数が同じ] かどうかで場合分け
+	// 最後，根據是否depth=0['(' 和')' 的數量相同] 來區分情況
 	if (depth == 0) {
 		printf("Yes\n");
 	}
