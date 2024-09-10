@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 long long modpow(long long a, long long b, long long m) {
-	// 繰り返し二乗法（p は a^1, a^2, a^4, a^8, ... といった値をとる）
+	// 重複平方法（p 取 a^1、a^2、 a^4、a^8、⋯的值）
 	long long p = a, answer = 1;
 	int i;
 	for (i = 0; i < 30; i++) {
@@ -13,7 +13,7 @@ long long modpow(long long a, long long b, long long m) {
 	return answer;
 }
 
-// division(a, b, m) は a÷b mod m を返す関数
+// Division(a, b, m) 是回傳a÷b mod m 的函式
 long long division(long long a, long long b, long long m) {
 	return (a * modpow(b, m - 2, m)) % m;
 }
@@ -22,19 +22,19 @@ const long long MOD = 1000000007;
 long long fact[200009];
 
 long long ncr(int n, int r) {
-	// ncr は n! を r! × (n-r)! で割った値
+	// ncr 是n! 除以r!×(n-r)! 的值
 	return division(fact[n], fact[r] * fact[n - r] % MOD, MOD);
 }
 
 int main() {
-	// 配列の初期化（fact[i] は i の階乗を 1000000007 で割った余り）
+	// 陣列初始化（fact[i] 是i 的階乘除以10000007 的餘數）
 	fact[0] = 1;
 	int i;
 	for (i = 1; i <= 200000; i++) {
 		fact[i] = (fact[i - 1] * i) % MOD;
 	}
 
-	// 入力 → 答えの出力
+	// 輸入→答案輸出
 	int X, Y;
 	scanf("%d%d", &X, &Y);
 	printf("%lld\n", ncr(X + Y, Y));
