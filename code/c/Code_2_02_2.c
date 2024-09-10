@@ -2,9 +2,9 @@
 
 int main() {
 	int a, b;
-	scanf("%d%d", &a, &b); // a と b を入力する
-	printf("%d\n", a & b); // a AND b の値を出力する
-	printf("%d\n", a | b); // a OR b の値を出力する
-	printf("%d\n", a ^ b); // a XOR b の値を出力する
+	scanf("%d%d", &a, &b); // 輸入 a 及 b
+	printf("%d\n", a & b); // 輸出 a AND b的值
+	printf("%d\n", a | b); // 輸出 a OR b的值
+	printf("%d\n", a ^ b); // 輸出 a XOR b的值
 	return 0;
 }
