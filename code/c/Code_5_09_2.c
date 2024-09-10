@@ -31,7 +31,7 @@ int main() {
 		answer += 1;
 	}
 
-	// 答えの出力
+	// 輸出答案
 	printf("%d\n", answer);
 	return 0;
 }
