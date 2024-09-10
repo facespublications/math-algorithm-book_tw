@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// 小問題 t を解く関数
+// 求解小問題 t 的函式
 bool shou_mondai(int A, int B, int t) {
-	int cl = (A + t - 1) / t; // A÷t の小数点以下切り上げ
-	int cr = B / t; // B÷t の小数点以下切り捨て
+	int cl = (A + t - 1) / t; // 將 A÷t 的小數點以下進位
+	int cr = B / t; // 將B÷t 的小數點以下捨去
 	if (cr - cl >= 1) return true;
 	return false;
 }
