@@ -3,7 +3,7 @@
 int N, B[100009], R[100009];
 
 int main() {
-	// 入力
+	// 輸入
 	scanf("%d", &N);
 	int i;
 	for (i = 1; i <= N; i++) {
@@ -13,7 +13,7 @@ int main() {
 		scanf("%d", &R[i]);
 	}
 
-	// 答えの計算 → 答えの出力
+	// 答案的計算 → 答案的輸出
 	double blue = 0.0, red = 0.0;
 	for (i = 1; i <= N; i++) {
 		blue += 1.0 * B[i] / N;
