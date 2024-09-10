@@ -43,8 +43,8 @@ int main() {
 	for (i = 1; i <= N; i++) {
 		printf("%d: {", i);
 		for (j = 0; j < degree[i]; j++) {
-			if (j >= 1) printf(","); // コンマ区切りで出力する
-			printf("%d", G[i][j]); // G[i][j] は頂点 i に隣接する頂点のうち j 番目のもの
+			if (j >= 1) printf(","); // 以逗號為區隔來輸出
+			printf("%d", G[i][j]); // G[i][j] 是與頂點　i 相鄰頂點之中的第　j 個頂點
 		}
 		printf("}\n");
 	}
