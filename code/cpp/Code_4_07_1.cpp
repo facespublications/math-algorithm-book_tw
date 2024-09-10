@@ -5,7 +5,7 @@ struct Matrix {
 	long long p[2][2] = { {0, 0}, {0, 0} };
 };
 
-Matrix Multiplication(Matrix A, Matrix B) { // 2~2 s—ñ A, B ‚ÌÏ‚ğ•Ô‚·ŠÖ”
+Matrix Multiplication(Matrix A, Matrix B) { // å›å‚³ã€€2Ã—2 çŸ©é™£ Aã€B ä¹˜ç©çš„å‡½å¼
 	Matrix C;
 	for (int i = 0; i < 2; i++) {
 		for (int k = 0; k < 2; k++) {
@@ -18,7 +18,7 @@ Matrix Multiplication(Matrix A, Matrix B) { // 2~2 s—ñ A, B ‚ÌÏ‚ğ•Ô‚·ŠÖ”
 	return C;
 }
 
-Matrix Power(Matrix A, long long n) { // A ‚Ì n æ‚ğ•Ô‚·ŠÖ”
+Matrix Power(Matrix A, long long n) { // å›å‚³ A çš„ n æ¬¡æ–¹çš„å‡½å¼
 	Matrix P = A, Q; bool flag = false;
 	for (int i = 0; i < 60; i++) {
 		if ((n & (1LL << i)) != 0LL) {
@@ -31,13 +31,13 @@ Matrix Power(Matrix A, long long n) { // A ‚Ì n æ‚ğ•Ô‚·ŠÖ”
 }
 
 int main() {
-	// “ü—Í ¨ —İæ‚ÌŒvZiN ‚ª 2 ˆÈã‚Å‚È‚¯‚ê‚Î³‚µ‚­“®ì‚µ‚È‚¢‚Ì‚Å’ˆÓj
+	// è¼¸å…¥ã€€â†’ã€€ä¹˜æ–¹çš„è¨ˆç®—ï¼ˆè«‹æ³¨æ„ï¼ŒN å¿…é ˆå¤§æ–¼ 2 æ‰èƒ½æ­£å¸¸é‹ä½œï¼‰
 	long long N;
 	cin >> N;
 	Matrix A; A.p[0][0] = 1; A.p[0][1] = 1; A.p[1][0] = 1;
 	Matrix B = Power(A, N - 1);
 
-	// o—Íi‰º‚©‚ç 9 Œ…–Ú‚ª 0 ‚Ìê‡AÅ‰‚É 0 ‚ğŠÜ‚Ü‚È‚¢Œ`‚Åo—Í‚µ‚Ä‚¢‚é‚±‚Æ‚É’ˆÓj
+	// è¼¸å‡ºï¼ˆè«‹æ³¨æ„ï¼Œå€’æ•¸ç¬¬ 9 ä½ç‚º 0 æ™‚ï¼Œä»¥é–‹é ­ä¸å« 0 çš„å½¢å¼è¼¸å‡ºï¼‰
 	cout << (B.p[1][0] + B.p[1][1]) % 1000000000 << endl;
 	return 0;
 }
