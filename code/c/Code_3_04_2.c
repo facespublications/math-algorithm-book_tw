@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-	// 入力
+	// 輸入
 	int N, P[59], Q[59];
 	scanf("%d", &N);
 	int i;
@@ -9,7 +9,7 @@ int main() {
 		scanf("%d%d", &P[i], &Q[i]);
 	}
 
-	// 答えの計算 → 答えの出力
+	// 答案的計算 → 答案的輸出
 	double answer = 0.0;
 	for (i = 1; i <= N; i++) {
 		answer += 1.0 * Q[i] / P[i];
