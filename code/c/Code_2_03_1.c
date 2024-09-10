@@ -12,8 +12,8 @@ int func2(int pos) {
 }
 
 int main() {
-	printf("%d\n", func1()); // 「2021」と出力
-	printf("%d\n", func2(500)); // 「1501」と出力
-	printf("%d\n", func2(500)); // 「1502」と出力
+	printf("%d\n", func1()); // 輸出「2021」
+	printf("%d\n", func2(500)); // 輸出「1501」
+	printf("%d\n", func2(500)); // 輸出「1502」
 	return 0;
 }
