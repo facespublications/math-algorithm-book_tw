@@ -2,19 +2,19 @@
 using namespace std;
 
 int main() {
-	double r = 2.0; // ã2 ‚ğ‹‚ß‚½‚¢‚©‚ç
-	double a = 2.0; // ‰Šú’l‚ğ“K“–‚É 2.0 ‚ÉƒZƒbƒg‚·‚é
+	double r = 2.0; // å› ç‚ºæ¬²æ±‚âˆš2
+	double a = 2.0; // å°‡åˆå§‹å€¼ä»»æ„è¨­å®šç‚º2.0
 
 	for (int i = 1; i <= 5; i++) {
-		// “_ (a, f(a)) ‚Ì x À•W‚Æ y À•W‚ğ‹‚ß‚é
+		// æ±‚é»(a, f(a)) çš„ã€€x åº§æ¨™åŠã€€y åº§æ¨™
 		double zahyou_x = a;
 		double zahyou_y = a * a;
 
-		// Úü‚ÌŒX‚«‚ğ‹‚ß‚é [y = (sessen_a)x + sessen_b ‚Æ‚·‚é]
+		// æ±‚åˆ‡ç·šçš„æ–¹ç¨‹å¼[ è¨­ç‚ºy=(sessen_a)x+sessen_b]
 		double sessen_a = 2.0 * zahyou_x;
 		double sessen_b = zahyou_y - sessen_a * zahyou_x;
 
-		// Ÿ‚Ì a ‚Ì’l next_a ‚ğ‹‚ß‚é
+		// æ±‚ä¸‹ä¸€å€‹a çš„å€¼next_a
 		double next_a = (r - sessen_b) / sessen_a;
 		printf("Step #%d: a = %.12lf -> %.12lf\n", i, a, next_a);
 		a = next_a;
