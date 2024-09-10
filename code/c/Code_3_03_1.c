@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 int main() {
-	// 入力
+	// 輸入
 	int N, A[109];
 	scanf("%d", &N);
 	for (int i = 1; i <= N; i++) {
 		scanf("%d", &A[i]);
 	}
 	
-	// 5 つのカードの番号 (i, j, k, l, m) を全探索
+	// 對5 張卡片的編號(i, j, k, l, m) 進行全搜尋
 	int answer = 0;
 	int i, j, k, l, m;
 	for (i = 1; i <= N; i++) {
@@ -25,7 +25,7 @@ int main() {
 		}
 	}
 	
-	// 出力
+	// 答案的輸出
 	printf("%d\n", answer);
 	return 0;
 }
