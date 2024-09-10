@@ -4,22 +4,22 @@ using namespace std;
 long long N, X, Y;
 
 int main() {
-	// “ü—Í
+	// è¼¸å…¥
 	cin >> N >> X >> Y;
 
-	// 4 ‚Â‚Ì®” (a, b, c, d) ‚Ì‘S’Tõ ¨ “š‚¦‚Ìo—Í
+	// 4 å€‹æ•´æ•¸(a, b, c, d) çš„å…¨æœå°‹â†’è¼¸å‡ºç­”æ¡ˆ
 	for (int a = 1; a <= N; a++) {
 		for (int b = a; b <= N; b++) {
 			for (int c = b; c <= N; c++) {
 				for (int d = c; d <= N; d++) {
 					if (a + b + c + d == X && 1LL * a * b * c * d == Y) {
 						cout << "Yes" << endl;
-						return 0; // ƒvƒƒOƒ‰ƒ€‚ÌŽÀs‚ðI—¹‚³‚¹‚é
+						return 0; // ä½¿ç¨‹å¼çµæŸåŸ·è¡Œ
 					}
 				}
 			}
 		}
 	}
-	cout << "No" << endl; // 1 ‚Â‚àŒ©‚Â‚©‚ç‚È‚©‚Á‚½‚ç No
+	cout << "No" << endl; // å¦‚æžœé€£ 1 çµ„éƒ½æ²’ç™¼ç¾çš„è©±ç‚ºNo
 	return 0;
 }
