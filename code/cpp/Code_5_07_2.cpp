@@ -6,7 +6,7 @@ long long N, A[200009], Answer = 0;
 long long fact[200009];
 
 long long modpow(long long a, long long b, long long m) {
-	// ŒJ‚è•Ô‚µ“ñæ–@ip ‚Í a^1, a^2, a^4, a^8, ... ‚Æ‚¢‚Á‚½’l‚ð‚Æ‚éj
+	// é‡è¤‡å¹³æ–¹æ³•ï¼ˆp å– a^1ã€a^2ã€ a^4ã€a^8ã€â‹¯çš„å€¼ï¼‰
 	long long p = a, Answer = 1;
 	for (int i = 0; i < 30; i++) {
 		if ((b & (1 << i)) != 0) { Answer *= p; Answer %= m; }
@@ -20,20 +20,20 @@ long long Division(long long a, long long b, long long m) {
 }
 
 long long ncr(int n, int r) {
-	// ncr ‚Í n! ‚ð r! ~ (n-r)! ‚ÅŠ„‚Á‚½’l
+	//ncr æ˜¯n! é™¤ä»¥r!Ã—(n-r)! çš„å€¼
 	return Division(fact[n], fact[r] * fact[n - r] % mod, mod);
 }
 
 int main() {
-	// ”z—ñ‚Ì‰Šú‰»ifact[i] ‚Í i ‚ÌŠKæ‚ð 1000000007 ‚ÅŠ„‚Á‚½—]‚èj
+	// é™£åˆ—åˆå§‹åŒ–ï¼ˆfact[i] æ˜¯i çš„éšŽä¹˜é™¤ä»¥10000007 çš„é¤˜æ•¸ï¼‰
 	fact[0] = 1;
 	for (int i = 1; i <= 200000; i++) fact[i] = 1LL * i * fact[i - 1] % mod;
 
-	// “ü—Í
+	// è¼¸å…¥
 	cin >> N;
 	for (int i = 1; i <= N; i++) cin >> A[i];
 
-	// “š‚¦‚ð‹‚ß‚é ¨ “š‚¦‚Ìo—Í
+	// æ±‚å‡ºç­”æ¡ˆ â†’ è¼¸å‡ºç­”æ¡ˆ
 	for (int i = 1; i <= N; i++) {
 		Answer += A[i] * ncr(N - 1, i - 1);
 		Answer %= mod;
