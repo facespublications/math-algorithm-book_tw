@@ -2,7 +2,7 @@
 using namespace std;
 
 long long modpow(long long a, long long b, long long m) {
-	// ŒJ‚è•Ô‚µ“ñæ–@ip ‚Í a^1, a^2, a^4, a^8, ... ‚Æ‚¢‚Á‚½’l‚ð‚Æ‚éj
+	// é‡è¤‡å¹³æ–¹æ³•ï¼ˆp å– a^1ã€a^2ã€ a^4ã€a^8ã€â‹¯çš„å€¼ï¼‰
 	long long p = a, Answer = 1;
 	for (int i = 0; i < 30; i++) {
 		if ((b & (1 << i)) != 0) { Answer *= p; Answer %= m; }
