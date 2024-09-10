@@ -4,10 +4,10 @@ using namespace std;
 int N, dp[54];
 
 int main() {
-	// “ü—Í
+	// è¼¸å…¥
 	cin >> N;
 
-	// “®“IŒv‰æ–@ ¨ “š‚¦‚Ìo—Í
+	// å‹•æ…‹è¦åŠƒæ³• â†’ è¼¸å‡ºç­”æ¡ˆ
 	for (int i = 0; i <= N; i++) {
 		if (i <= 1) dp[i] = 1;
 		else dp[i] = dp[i - 1] + dp[i - 2];
