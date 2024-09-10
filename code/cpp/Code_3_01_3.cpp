@@ -6,9 +6,9 @@ int main() {
 	cin >> N;
 	for (long long i = 1; i * i <= N; i++) {
 		if (N % i != 0) continue;
-		cout << i << endl; // i ‚ð–ñ”‚É’Ç‰Á
+		cout << i << endl; // è¿½åŠ å› æ•¸ i
 		if (i != N / i) {
-			cout << N / i << endl; // i ‚ N/i ‚Ì‚Æ‚«AN/i ‚à–ñ”‚É’Ç‰Á
+			cout << N / i << endl; // i â‰  N/i æ™‚ï¼Œä¹Ÿè¿½åŠ å› æ•¸ N/i
 		}
 	}
 	return 0;
