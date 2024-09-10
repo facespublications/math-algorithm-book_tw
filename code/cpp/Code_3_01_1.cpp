@@ -1,7 +1,7 @@
 bool isprime(long long N) {
-	// N ‚ð 2 ˆÈã‚Ì®”‚Æ‚µAN ‚ª‘f”‚Å‚ ‚ê‚Î trueA‘f”‚Å‚È‚¯‚ê‚Î false ‚ð•Ô‚·
+	// è¨­ N ç‚º 2 ä»¥ä¸Šæ•´æ•¸ï¼Œè‹¥ N ç‚ºè³ªæ•¸å‰‡è¿”å›ž trueï¼Œè‹¥ä¸æ˜¯è³ªæ•¸å‰‡è¿”å›ž false
 	for (long long i = 2; i <= N - 1; i++) {
-		// N ‚ª i ‚ÅŠ„‚èØ‚ê‚½ê‡A‚±‚ÌŽž“_‚Å‘f”‚Å‚Í‚È‚¢‚Æ•ª‚©‚é
+		// N è¢« i æ•´é™¤æ™‚ï¼Œæ­¤æ™‚å¯çŸ¥ä¸æ˜¯è³ªæ•¸
 		if (N % i == 0) return false;
 	}
 	return true;
