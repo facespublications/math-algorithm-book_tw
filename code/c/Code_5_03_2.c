@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-	// 入力
+	// 輸入
 	int N, K, A[59];
 	scanf("%d%d", &N, &K);
 	int i;
@@ -9,13 +9,13 @@ int main() {
 		scanf("%d", &A[i]);
 	}
 	
-	// 数列の要素の総和 sum を求める
+	// 求數列元素的總和sum
 	int sum = 0;
 	for (i = 1; i <= N; i++) {
 		sum += A[i];
 	}
 
-	// 答えの出力
+	// 輸出答案
 	if (sum % 2 != K % 2) {
 		printf("No\n");
 	}
