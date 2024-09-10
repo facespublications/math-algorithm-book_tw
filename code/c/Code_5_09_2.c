@@ -4,16 +4,16 @@
 int N, L[2009], R[2009];
 
 int main() {
-	// 入力
+	// 輸入
 	scanf("%d", &N);
 	for (int i = 1; i <= N; i++) {
 		scanf("%d%d", &L[i], &R[i]);
 	}
 
-	// 映画の選び方のシミュレーション
-	// 見れる映画の終了時刻の最小値 min_endtime は最初 1000000 のようなあり得ない値に設定する
+	// 模擬電影的選擇方法
+	// 可觀看電影的結束時間最小值min_endtime 最初是設定成像1000000 這樣不可能的值
 	int answer = 0;
-	int current_time = 0; // Current_Time は現在時刻（直前に見た映画の終了時刻）
+	int current_time = 0; // Current_Time為現在時間（之前看完的電影的結束時間）
 	while (true) {
 		int min_endtime = 1000000;
 		for (int i = 1; i <= N; i++) {
