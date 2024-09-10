@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main() {
-	// 入力
+	// 輸入
 	int N, S;
 	scanf("%d%d", &N, &S);
 	
-	// 答えを求める
+	// 求解
 	int answer = 0;
 	int i, j;
 	for (i = 1; i <= N; i++) {
@@ -16,6 +16,6 @@ int main() {
 		}
 	}
 	
-	// 出力
+	// 輸出
 	printf("%d\n", answer);
 }
