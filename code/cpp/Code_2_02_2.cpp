@@ -3,9 +3,9 @@ using namespace std;
 
 int main() {
 	int a, b;
-	cin >> a >> b; // a ‚Æ b ‚ğ“ü—Í‚·‚é
-	cout << (a & b) << endl; // a AND b ‚Ì’l‚ğo—Í‚·‚é
-	cout << (a | b) << endl; // a OR b ‚Ì’l‚ğo—Í‚·‚é
-	cout << (a ^ b) << endl; // a XOR b ‚Ì’l‚ğo—Í‚·‚é
+	cin >> a >> b; // è¼¸å…¥ a åŠ b
+	cout << (a & b) << endl; // è¼¸å‡º a AND bçš„å€¼
+	cout << (a | b) << endl; // è¼¸å‡º a OR bçš„å€¼
+	cout << (a ^ b) << endl; // è¼¸å‡º a XOR bçš„å€¼
 	return 0;
 }
