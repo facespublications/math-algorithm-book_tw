@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-// 正の整数 A と B の最大公約数を返す関数
-// GCD は Greatest Common Divisor（最大公約数）の略
+// 返回正整數A 和B 的最大公因數的函式
+// GCD 是Greatest Common Divisor（最大公因數）的縮寫
 long long GCD(long long A, long long B) {
 	long long answer = 0;
 	long long i;
