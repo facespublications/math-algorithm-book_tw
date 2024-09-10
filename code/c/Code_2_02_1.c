@@ -13,7 +13,7 @@ int main() {
 	printf("%d\n", 8 % 5); // 輸出 3
 	printf("%d\n", 869 % 120); // 輸出 29
 
-	// 絕對值（abs）（注： 在 C 語言中藥使用 abs 需 include <stdlib.h>）
+	// 絕對值（abs）（注： 在 C 語言中要使用 abs 需 include <stdlib.h>）
 	printf("%d\n", abs(-45)); // 輸出 45
 	printf("%d\n", abs(15)); // 輸出 15
 
