@@ -7,7 +7,7 @@ typedef struct {
 	long long p[2][2];
 } matrix;
 
-// 2×2 のゼロ行列 (= [[0, 0], [0, 0]]) を返す
+// 回傳 2×2 的空矩陣 (= [[0, 0], [0, 0]]) 
 matrix zero_matrix() {
 	matrix A;
 	A.p[0][0] = 0; A.p[0][1] = 0;
@@ -15,7 +15,7 @@ matrix zero_matrix() {
 	return A;
 }
 
-// 2×2 行列の積を返す関数
+// 回傳2×2 矩陣 A、B 乘積的函式
 matrix multiplication(matrix A, matrix B) {
 	matrix C = zero_matrix();
 	int i, j, k;
@@ -30,7 +30,7 @@ matrix multiplication(matrix A, matrix B) {
 	return C;
 }
 
-// 行列 A の n 乗を返す関数
+// 回傳 A 的 n 次方的函式
 matrix power(matrix A, long long n) {
 	matrix P = A;
 	matrix Q = zero_matrix();
@@ -51,13 +51,13 @@ matrix power(matrix A, long long n) {
 }
 
 int main() {
-	// 入力 → 累乗の計算（N が 2 以上でなければ正しく動作しないので注意）
+	// 輸入→乘方的計算（請注意，N 必須大於 2 才能正常運作）
 	long long N;
 	scanf("%lld", &N);
 	matrix A; A.p[0][0] = 1; A.p[0][1] = 1; A.p[1][0] = 1; A.p[1][1] = 0;
 	matrix B = power(A, N - 1);
 	
-	// 出力（下から 9 桁目が 0 の場合、最初に 0 を含まない形で出力していることに注意）
+	// 輸出（請注意，倒數第 9 位為 0 時，以開頭不含 0 的形式輸出）
 	printf("%lld\n", (B.p[1][0] + B.p[1][1]) % MOD);
 	
 	return 0;
