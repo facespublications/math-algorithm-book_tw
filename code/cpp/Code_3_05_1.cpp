@@ -2,13 +2,13 @@
 using namespace std;
 
 int main() {
-	int N = 10000; // N ‚Ís‰ñ”i“K‹X•ÏX‚·‚éj
+	int N = 10000; // Nç‚ºæ¸¬è©¦æ¬¡æ•¸ï¼ˆå¯é©ç•¶è®Šæ›´ï¼‰
 	int M = 0;
 	for (int i = 1; i <= N; i++) {
-		double px = rand() / (double)RAND_MAX; // 0 ˆÈã 1 ˆÈ‰º‚Ì—”iƒ‰ƒ“ƒ_ƒ€‚È”j‚ğ¶¬
-		double py = rand() / (double)RAND_MAX; // 0 ˆÈã 1 ˆÈ‰º‚Ì—”iƒ‰ƒ“ƒ_ƒ€‚È”j‚ğ¶¬
-		// Œ´“_‚©‚ç‚Ì‹——£‚Í sqrt(px * px + py * py)
-		// ‚±‚ê‚ª 1 ˆÈ‰º‚Å‚ ‚ê‚Î—Ç‚¢‚Ì‚ÅAğŒ‚Íupx * px + py * py <= 1v
+		double px = rand() / (double)RAND_MAX; // ç”Ÿæˆ 0 ä»¥ä¸Š1 ä»¥ä¸‹çš„äº‚æ•¸ï¼ˆéš¨æ©Ÿçš„æ•¸ï¼‰
+		double py = rand() / (double)RAND_MAX; // ç”Ÿæˆ 0 ä»¥ä¸Š1 ä»¥ä¸‹çš„äº‚æ•¸ï¼ˆéš¨æ©Ÿçš„æ•¸ï¼‰
+		// èˆ‡åŸé»çš„è·é›¢ç‚ºsqrt(px * px + py * py)
+		// æ­¤å€¼æœ€å¥½åœ¨1 ä»¥ä¸‹ï¼Œå› æ­¤æ¢ä»¶ç‚ºã€Œpx * px + py * py <= 1ã€
 		if (px * px + py * py <= 1.0) M += 1;
 	}
 	printf("%.12lf\n", 4.0 * M / N);
