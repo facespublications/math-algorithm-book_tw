@@ -2,7 +2,7 @@ import java.util.*;
 
 class Code_4_06_6 {
 	public static void main(String[] args) {
-		// 陣列初始化（fact[i] 是i 的階乘除以10000007 的餘數）
+		// 陣列初始化（fact[i] 是 i 的階乘除以10000007 的餘數）
 		fact = new long[LIMIT + 1];
 		fact[0] = 1;
 		for (int i = 1; i <= LIMIT; i++) {
