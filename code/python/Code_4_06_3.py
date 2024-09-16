@@ -2,7 +2,7 @@ MOD = 1000000007
 
 a, b = map(int, input().split())
 
-answer = 1  # a の 0 乗は 1 なので、answer = 1 に初期化しておく
+answer = 1  # a 的 0 次方為 1 ，所以將之初始化為 answer = 1
 for i in range(b):
 	answer = (answer * a) % MOD
 
