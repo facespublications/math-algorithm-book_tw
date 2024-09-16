@@ -1,7 +1,7 @@
-# 小問題 t を解く関数
+# 求解小問題 t 的函式
 def shou_mondai(A, B, t):
-	cl = (A + t - 1) // t  # A÷t の小数点以下切り上げ
-	cr = B // t  # B÷t の小数点以下切り捨て
+	cl = (A + t - 1) // t  # 將 A÷t 的小數點以下進位
+	cr = B // t  # 將　B÷t 的小數點以下捨去
 	if cr - cl >= 1:
 		return True
 	else:
