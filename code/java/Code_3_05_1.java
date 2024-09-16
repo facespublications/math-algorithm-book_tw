@@ -3,13 +3,13 @@ import java.util.*;
 class Code_3_05_1 {
 	public static void main(String[] args) {
 		Random rd = new Random();
-		int N = 10000; // N は試行回数（適宜変更する）
+		int N = 10000; // N 為測試次數（可適當變更）
 		int M = 0;
 		for (int i = 1; i <= N; i++) {
-			double px = rd.nextDouble(); // 0 以上 1 未満の乱数を生成（C++ のコード 3.5.1 では 0 以上 1 以下の乱数を生成しているが、ほとんど同じ）
-			double py = rd.nextDouble(); // 0 以上 1 未満の乱数を生成（C++ のコード 3.5.1 では 0 以上 1 以下の乱数を生成しているが、ほとんど同じ）
-			// 原点からの距離は sqrt(px * px + py * py)
-			// これが 1 以下であれば良いので、条件は「px * px + py * py <= 1」（「sqrt(px * px + py * py) <= 1」と同値）
+			double px = rd.nextDouble(); // 生成 0 以上 1 未滿的亂數（雖然C++ 的程式碼 3.5.1 為生成 0 以上 1 以下的亂數，但幾乎相同）
+			double py = rd.nextDouble(); // 生成 0 以上 1 未滿的亂數（雖然C++ 的程式碼 3.5.1 為生成 0 以上 1 以下的亂數，但幾乎相同）
+			// 與原點的距離為 sqrt(px * px + py * py)
+			// 此值最好在1 以下，因此條件為「px * px + py * py <= 1」（與「sqrt(px * px + py * py) <= 1」同値）
 			if (px * px + py * py <= 1.0) {
 				M++;
 			}
