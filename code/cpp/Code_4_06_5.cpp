@@ -14,7 +14,7 @@ long long modpow(long long a, long long b, long long m) {
 	return Answer;
 }
 
-// Division(a, b, m) 是回傳　a÷b mod m 的函式関
+// Division(a, b, m) 是回傳　a÷b mod m 的函式
 long long Division(long long a, long long b, long long m) {
 	return (a * modpow(b, m - 2, m)) % m;
 }
