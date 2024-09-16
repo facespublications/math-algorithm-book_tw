@@ -1,5 +1,5 @@
-# 正の整数 A と B の最大公約数を返す関数
-# GCD は Greatest Common Divisor（最大公約数）の略
+# 返回正整數 A 和 B 的最大公因數的函式
+# GCD 是Greatest Common Divisor（最大公因數）的縮寫
 def GCD(A, B):
 	answer = 0
 	for i in range(1, min(A, B) + 1):
