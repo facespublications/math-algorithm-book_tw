@@ -14,7 +14,7 @@ class Code_5_05_2 {
 		}
 		
 		// 將左端x、右端x、下端y 和上端y 進行全搜尋（各自的編號為i,j,k,l）
-		long answer = (1L << 62); // あり得ない値に設定
+		long answer = (1L << 62); // 設定成不可能的值
 		for (int i = 1; i <= N; i++) {
 			for (int j = 1; j <= N; j++) {
 				for (int k = 1; k <= N; k++) {
