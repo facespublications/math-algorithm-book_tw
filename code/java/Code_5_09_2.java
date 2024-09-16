@@ -2,7 +2,7 @@ import java.util.*;
 
 class Code_5_09_2 {
 	public static void main(String[] args) {
-		// 入力
+		// 輸入
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		int[] L = new int[N + 1];
@@ -12,10 +12,10 @@ class Code_5_09_2 {
 			R[i] = sc.nextInt();
 		}
 		
-		// 映画の選び方のシミュレーション
-		// 見れる映画の終了時刻の最小値 minEndtime は、最初 1000000 (INF で設定）のようなあり得ない値にセットする
+		// 模擬電影的選擇方法
+		// 可觀看電影的結束時間最小值 minEndtime は、最初是設定成像 1000000 (以 INF 設定）這樣不可能的值
 		final int INF = 1000000;
-		int currentTime = 0; // currentTime は現在時刻（直前に見た映画の終了時刻）
+		int currentTime = 0; // currentTime 為現在時間（之前看完的電影的結束時間）
 		int answer = 0;
 		while (true) {
 			int minEndtime = INF;
@@ -31,7 +31,7 @@ class Code_5_09_2 {
 			answer += 1;
 		}
 		
-		// 答えの出力
+		// 輸出答案
 		System.out.println(answer);
 	}
 }
