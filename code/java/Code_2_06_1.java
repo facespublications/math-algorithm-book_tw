@@ -2,7 +2,7 @@ import java.util.*;
 
 class Code_2_06_1 {
 	public static void main(String[] args) {
-		// 入力
+		// 輸入
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		int S = sc.nextInt();
@@ -11,13 +11,13 @@ class Code_2_06_1 {
 			A[i] = sc.nextInt();
 		}
 		
-		// 全パターンを探索：(1L << N) は 2 の N 乗（ただし 1L は long 型の 1 を表す）
+		// 搜尋全部模式：（1L << N）為 2 的 N 次方（ 1L 為表示 long 型的 1）
 		String answer = "No";
 		for (long i = 0; i < (1L << N); i++) {
 			int sum = 0;
 			for (int j = 1; j <= N; j++) {
-				// (i & (1L << (j - 1))) != 0LL の場合、i の 2 進法表記の下から j 桁目が 1
-				// (1L << (j - 1)) は Java では「2 の j-1 乗」を意味します
+				// (i & (1L << (j - 1))) != 0LL 時，i 的二進制表示的倒數第 j 位是 1
+				// (1L << (j - 1)) 在 Java 中代表「2 的 j-1 次方」
 				if ((i & (1L << (j - 1))) != 0L) {
 					sum += A[j];
 				}
@@ -28,7 +28,7 @@ class Code_2_06_1 {
 			}
 		}
 		
-		// 出力
+		// 輸出
 		System.out.println(answer);
 	}
 }
