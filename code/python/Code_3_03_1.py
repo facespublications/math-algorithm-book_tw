@@ -1,12 +1,12 @@
 # 注意
-# Python で提出すると、N = 100 では実行に 10 秒程度かかり、TLE（実行時間制限オーバー）になります。
-# 一方、同じプログラムを PyPy3 で提出すると、実行に 0.5 秒程度しかかからず、AC（正解）することができます。
+# 以 Python 提出的話，若 N = 100 實行需要 10 秒程度的時間，會是TLE（超過實行時間限制）。
+# 另一方面，以 PyPy3 提出同一個程式，實行只需要 0.5 秒程度的時間，可以達成AC（正解）。
 
-# 入力
+# 輸入
 N = int(input())
 A = list(map(int, input().split()))
 
-# 5 つのカードの番号 (i, j, k, l, m) を全探索
+# 對 5 張卡片的編號(i, j, k, l, m) 進行全搜尋
 answer = 0
 for i in range(0, N):
 	for j in range(i + 1, N):
@@ -16,5 +16,5 @@ for i in range(0, N):
 					if A[i] + A[j] + A[k] + A[l] + A[m] == 1000:
 						answer += 1
 
-# 出力
+# 輸出
 print(answer)
