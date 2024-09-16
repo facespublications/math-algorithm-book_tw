@@ -2,7 +2,7 @@ import java.util.*;
 
 class Code_3_03_1 {
 	public static void main(String[] args) {
-		// 入力
+		// 輸入
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		int[] A = new int[N + 1];
@@ -10,7 +10,7 @@ class Code_3_03_1 {
 			A[i] = sc.nextInt();
 		}
 		
-		// 5 つのカードの番号 (i, j, k, l, m) を全探索
+		// 對 5 張卡片的編號(i, j, k, l, m) 進行全搜尋
 		int answer = 0;
 		for (int i = 1; i <= N; i++) {
 			for (int j = i + 1; j <= N; j++) {
@@ -26,7 +26,7 @@ class Code_3_03_1 {
 			}
 		}
 		
-		// 出力
+		// 輸出
 		System.out.println(answer);
 	}
 }
