@@ -2,7 +2,7 @@ import java.util.*;
 
 class Code_3_08_1 {
 	public static void main(String[] args) {
-		// 入力（注意：ここでは配列は A[0] から A[N-1] までの順に入力しています。添え字を 0 から始めることを 0-indexed などといいます。）
+		// 輸入（注意：此處按照陣列 A[0] 到 A[N-1] 的順序輸入。下標從零開始稱作 0-indexed 等。）
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		long X = sc.nextLong();
@@ -11,10 +11,10 @@ class Code_3_08_1 {
 			A[i] = sc.nextLong();
 		}
 		
-		// 配列のソート
+		// 陣列的排序
 		Arrays.sort(A);
 		
-		// 二分探索
+		// 二元搜尋
 		String answer = "No";
 		int left = 0, right = N - 1;
 		while (left <= right) {
@@ -24,16 +24,16 @@ class Code_3_08_1 {
 				break;
 			}
 			if (A[mid] > X) {
-				// 探索範囲を前半部分に絞る
+				// 將搜尋範圍縮小到前半部分
 				right = mid - 1;
 			}
 			if (A[mid] < X) {
-				// 探索範囲を後半部分に絞る
+				// 將搜尋範圍縮小到後半部分
 				left = mid + 1;
 			}
 		}
 		
-		// 答えの出力
+		// 輸出答案
 		System.out.println(answer);
 	}
 }
