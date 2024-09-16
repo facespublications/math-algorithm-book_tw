@@ -2,7 +2,7 @@ import java.util.*;
 
 class Code_5_03_2 {
 	public static void main(String[] args) {
-		// 入力 → 数列の要素の総和 sum を求める
+		// 輸入 → 求數列元素的總和sum
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		int K = sc.nextInt();
@@ -15,7 +15,7 @@ class Code_5_03_2 {
 			sum += A[i];
 		}
 		
-		// 答えの出力
+		// 輸出答案
 		if (sum % 2 != K % 2) {
 			System.out.println("No");
 		}
