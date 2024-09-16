@@ -3,7 +3,7 @@ import java.io.*;
 
 class Code_4_05_2 {
 	public static void main(String[] args) throws IOException {
-		// 入力（高速な入出力のため、Scanner の代わりに BufferedReader を使っています）
+		// 輸入（由於是高速的輸入輸出，因此使用　BufferedReader　代替　Scanner）
 		BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		st = new StringTokenizer(buff.readLine());
@@ -17,7 +17,7 @@ class Code_4_05_2 {
 			B[i] = Integer.parseInt(st.nextToken());
 		}
 		
-		// 隣接リストの作成
+		// 製作鄰接表
 		G = new ArrayList[N + 1];
 		for (int i = 1; i <= N; i++) {
 			G[i] = new ArrayList<Integer>();
@@ -27,14 +27,14 @@ class Code_4_05_2 {
 			G[B[i]].add(A[i]);
 		}
 		
-		// 深さ優先探索
+		// 深度優先搜尋
 		visited = new boolean[N + 1];
 		for (int i = 1; i <= N; i++) {
 			visited[i] = false;
 		}
 		dfs(1);
 
-		// 連結かどうかの判定（answer = true のとき連結）
+		// 判定是否連通（answer=true 時為連通）
 		boolean answer = true;
 		for (int i = 1; i <= N; i++) {
 			if (visited[i] == false) {
