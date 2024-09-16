@@ -1,19 +1,19 @@
-# 入力
+# 輸入
 N, S = map(int, input().split())
 A = list(map(int, input().split()))
 
-# 全パターンを探索：(1 << N) は 2 の N 乗
+# 搜尋全部模式：（1L << N）為 2 的 N 次方
 answer = "No"
 for i in range(0, 1 << N):
 	partsum = 0
 	for j in range(0, N):
-		# (i & (1 << j)) != 0LL の場合、i の 2 進法表記の下から j+1 桁目が 1
-		# (1 << j) は Python では「2 の j 乗」を意味します
+		# (i & (1 << j)) != 0LL 時，i 的二進制表示的倒數第 j+1 位是 1
+		# (1 << j) 在 Python 中代表「2 的 j 次方」
 		if (i & (1 << j)) != 0:
 			partsum += A[j]
 	if partsum == S:
 		answer = "Yes"
 		break
 
-# 出力
+# 輸出
 print(answer)
