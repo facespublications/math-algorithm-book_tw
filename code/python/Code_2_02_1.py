@@ -1,23 +1,23 @@
-import math # math.sqrt 関数を使うためには、math モジュールを import する必要がある
+import math # 要使用 math.sqrt 函式，需要 import math 模塊
 
-# 四則演算
-print(869 + 120) # 989 と出力
-print(869 - 120) # 749 と出力
-print(869 * 120) # 104280 と出力
-print(869 // 120) # 7 と出力（Python 3 では、"//" は割り算の商を求める一方、"/" は小数部分も求めることに注意）
+# 四則運算
+print(869 + 120) # 輸出 989
+print(869 - 120) # 輸出 749
+print(869 * 120) # 輸出 104280
+print(869 // 120) # 輸出 7（請注意在 Python 3，"//" 是計算除法的商，而 "/" 也會求小數部分）
 
-# 剰余 (mod)
-print(8 % 5) # 3 と出力
-print(869 % 120) # 29 と出力
+# 餘數 (mod)
+print(8 % 5) # 輸出 3
+print(869 % 120) # 輸出 29
 
-# 絶対値 (abs)
-print(abs(-45)) # 45 と出力
-print(abs(15)) # 15 と出力
+# 絕對値 (abs)
+print(abs(-45)) # 輸出 45
+print(abs(15)) # 輸出 15
 
-# 累乗
-print(10 ** 2) # 100 と出力
-print(3 ** 4) # 81 と出力
+# 乘方
+print(10 ** 2) # 輸出 100
+print(3 ** 4) # 輸出 81
 
-# 平方根 (sqrt)
-print("%.5f" % math.sqrt(4.0)) # 2.00000 と出力
-print("%.5f" % math.sqrt(2.0)) # 1.41421 と出力
+# 方根 (sqrt)
+print("%.5f" % math.sqrt(4.0)) # 輸出 2.00000
+print("%.5f" % math.sqrt(2.0)) # 輸出 1.41421
