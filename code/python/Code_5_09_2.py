@@ -1,14 +1,14 @@
-# 入力
+# 輸入
 N = int(input())
 L = [ None ] * N
 R = [ None ] * N
 for i in range(N):
 	L[i], R[i] = map(int, input().split())
 
-# 映画の選び方のシミュレーション
-# 見れる映画の終了時刻の最小値 min_endtime は、最初 1000000 (INF で設定）のようなあり得ない値にセットする
+# 模擬電影的選擇方法
+# 可觀看電影的結束時間最小值 min_endtime ，最初是設定成像 1000000 (以 INF 設定）這樣不可能的值
 INF = 1000000
-current_time = 0  # current_time は現在時刻（直前に見た映画の終了時刻）
+current_time = 0  # current_time 為現在時間（之前看完的電影的結束時間）
 answer = 0
 while True:
 	min_endtime = INF
@@ -20,5 +20,5 @@ while True:
 	current_time = min_endtime
 	answer += 1
 
-# 答えの出力
+# 輸出答案
 print(answer)
