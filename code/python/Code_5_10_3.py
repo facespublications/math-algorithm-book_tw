@@ -1,21 +1,21 @@
-# 入力
+# 輸入
 N, X, Y = map(int, input().split())
 
-# 4 つの整数 (a, b, c, d) の全探索
+# 4 個整數(a, b, c, d) 的全搜尋
 flag = False
 for a in range(1, N + 1):
 	for b in range(a, N + 1):
 		for c in range(b, N + 1):
 			for d in range(c, N + 1):
 				if a + b + c + d == X and a * b * c * d == Y:
-					flag = True  # 答えが見つかったら flag を true にする
+					flag = True  # 如果找到答案的話 flag 為 true 
 
-# 答えの出力
+# 輸出答案
 if flag == True:
 	print("Yes")
 else:
 	print("No")
 
-# p.256 注 5.10.2 に書かれてあるように、Python は実行速度が遅いので、最大ケースでは実行に数十秒かかります。
-# しかし、同じプログラムを PyPy3 で実行すると、最大ケースでも 1 秒ほどで答えを求めることができます。
-# より良い計算量のプログラムについては、Code_5_10_3_extra.py を見てください。
+# 如 p.256 注 5.10.2 所述，由於 Python 的執行速度較慢，最大情況下執行可能需要數十秒。
+# 然而，如果使用相同的程式在 PyPy3 上執行，即使在最大情況下也能在大約 1 秒內得到答案。
+# 有關更優化的計算量程式，請參見 Code_5_10_3_extra.py。
