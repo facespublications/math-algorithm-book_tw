@@ -6,7 +6,7 @@ class Code_4_06_3 {
 		final long MOD = 1000000007;
 		long a = sc.nextLong();
 		long b = sc.nextLong();
-		long answer = 1; // a の 0 乗は 1 なので、answer = 1 に初期化しておく
+		long answer = 1; // a　的 0 次方為 1，因此初始化成 answer=1
 		for (long i = 1; i <= b; i++) {
 			answer = (answer * a) % MOD;
 		}
