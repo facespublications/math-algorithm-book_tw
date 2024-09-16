@@ -2,7 +2,7 @@ from copy import deepcopy
 
 MOD = 1000000000
 
-# 2×2 行列 A, B の積を返す関数
+# 回傳　2×2 矩陣 A、B 乘積的函式
 def multiply(A, B):
 	global MOD
 	C = [ [ 0, 0 ], [ 0, 0 ] ]
@@ -13,7 +13,7 @@ def multiply(A, B):
 				C[i][j] %= MOD
 	return C
 
-# A の n 乗を返す関数
+# 回傳 A 的 n 次方的函式
 def power(A, n):
 	P = deepcopy(A)
 	Q = [ [ 0, 0 ], [ 0, 0 ] ]
@@ -28,7 +28,7 @@ def power(A, n):
 		P = deepcopy(multiply(P, P))
 	return Q
 
-# 入力 → 累乗の計算（N が 2 以上でなければ正しく動作しないので注意）
+# 輸入 → 乘方的計算（請注意，N 必須大於 2 才能正常運作）
 N = int(input())
 A = [ [ 1, 1 ], [ 1, 0 ] ]
 B = power(A, N - 1)
