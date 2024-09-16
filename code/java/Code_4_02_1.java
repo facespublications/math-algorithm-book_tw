@@ -3,7 +3,7 @@ import java.io.*;
 
 class Code_4_02_1 {
 	public static void main(String[] args) throws IOException {
-		// 入力（高速な入出力のため、Scanner の代わりに BufferedReader を使っています）
+		// 輸入（由於是高速的輸入輸出，使用 BufferedReader 代替 Scanner）
 		BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		st = new StringTokenizer(buff.readLine());
@@ -22,14 +22,14 @@ class Code_4_02_1 {
 			R[j] = Integer.parseInt(st.nextToken());
 		}
 		
-		// 累積和を求める
+		// 求出累積和
 		int[] B = new int[N + 1];
 		B[0] = 0;
 		for (int i = 1; i <= N; i++) {
 			B[i] = B[i - 1] + A[i];
 		}
 		
-		// 答えを計算して出力
+		// 計算並輸出答案
 		for (int j = 1; j <= Q; j++) {
 			System.out.println(B[R[j]] - B[L[j] - 1]);
 		}
