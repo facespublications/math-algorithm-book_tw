@@ -30,11 +30,11 @@ class Code_4_06_6 {
 		return answer;
 	}
 	static long division(long a, long b, long m) {
-		// division(a, b, m) 是求 a÷b mod m 的函式
+		// division(a, b, m) 是回傳 a÷b mod m 的函式
 		return (a * modpow(b, m - 2, m)) % m;
 	}
 	static long ncr(int n, int r) {
-		// ncr は n! を r! × (n-r)! で割った値
+		// ncr 是 n! 除以 r!×(n-r)! 的值
 		return division(fact[n], fact[r] * fact[n - r] % MOD, MOD);
 	}
 }
