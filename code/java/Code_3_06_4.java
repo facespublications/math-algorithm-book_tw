@@ -9,7 +9,7 @@ class Code_3_06_4 {
 	}
 	static long GCD(long A, long B) {
 		if (B == 0) {
-			return A; // ベースケース
+			return A; // 基本情況
 		}
 		return GCD(B, A % B);
 	}
