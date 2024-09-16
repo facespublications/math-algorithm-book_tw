@@ -1,9 +1,9 @@
-# このプログラムは、コード 3.1.3 とは異なり、約数を小さい順に出力するプログラムとなっています。
+# 本程式與程式碼 3.1.3 不同，是由小到大輸出因數的程式。
 
-# 入力
+# 輸入
 N = int(input())
 
-# すべての約数を求め、配列 divisors に入れる
+# 求所有因數，放入陣列 divisors
 LIMIT = int(N ** 0.5)
 divisors = []
 for i in range(1, LIMIT + 1):
@@ -12,8 +12,8 @@ for i in range(1, LIMIT + 1):
 		if i != N // i:
 			divisors.append(N // i)
 
-# 小さい順に並べ替え → 出力
-# sort は小さい順に並べ替える関数です（3.6.1 項で扱います）
+# 由小到大排列 → 輸出
+# sort 為由小到大排列的函式（於 3.6.1 項提及）
 divisors.sort()
 for i in divisors:
 	print(i)
