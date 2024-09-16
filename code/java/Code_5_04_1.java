@@ -19,7 +19,7 @@ class Code_5_04_1 {
 				}
 			}
 		}
-		// 答えの出力
+		// 輸出答案
 		long answer = (long)N * N * N - yojishou;
 		System.out.println(answer);
 	}
