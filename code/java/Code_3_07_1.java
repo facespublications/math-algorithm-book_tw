@@ -18,8 +18,8 @@ class Code_3_07_1 {
 				dp[i] = Math.abs(H[i - 1] - H[i]);
 			}
 			if (i >= 3) {
-				int v1 = dp[i - 1] + Math.abs(H[i - 1] - H[i]); // 1 個前の足場からジャンプするとき
-				int v2 = dp[i - 2] + Math.abs(H[i - 2] - H[i]); // 2 個前の足場からジャンプするとき
+				int v1 = dp[i - 1] + Math.abs(H[i - 1] - H[i]); // 跳躍到前 1 個跳台時
+				int v2 = dp[i - 2] + Math.abs(H[i - 2] - H[i]); // 跳躍到前 2 個跳台時
 				dp[i] = Math.min(v1, v2);
 			}
 		}
