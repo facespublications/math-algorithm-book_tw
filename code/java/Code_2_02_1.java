@@ -2,7 +2,7 @@ import java.util.*;
 
 class Code_2_02_1 {
 	public static void main(String[] args) {
-		// 四則演算
+		// 四則運算
 		System.out.println(869 + 120); // 輸出 989
 		System.out.println(869 - 120); // 輸出 749
 		System.out.println(869 * 120); // 輸出 104280
