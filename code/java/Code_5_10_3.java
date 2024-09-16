@@ -15,7 +15,7 @@ class Code_5_10_3 {
 				for (int c = b; c <= N; c++) {
 					for (int d = c; d <= N; d++) {
 						if (a + b + c + d == X && (long)a * b * c * d == Y) {
-							flag = true; // 如果沒找到答案的話 flag 為 true 
+							flag = true; // 如果找到答案的話 flag 為 true 
 						}
 					}
 				}
