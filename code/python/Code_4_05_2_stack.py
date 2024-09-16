@@ -1,35 +1,35 @@
-# このソースコードは、深さ優先探索 (DFS) をスタックを用いて実装したものです。
-# スタックは「一番上に要素を積む」「一番上の要素を調べる」「一番上に積まれた要素を取り除く」という 3 種類の操作ができるデータ構造です。
-# 深さ優先探索の部分は、コード 4.5.3 のキューをスタックに変更したものをベースに書かれています。
+# 這個原始碼為將深度優先搜尋 (DFS) 使用了堆疊的實作例。
+# 堆疊為可進行「在最上層堆積元素」、「查找堆積在最上層的元素」、「刪除堆積在最上層的元素」三種操作的資料結構。
+# 深度優先搜尋的部分為將程式碼 4.5.3 的 queue 變更為 stack，以此為基礎撰寫。
 
-# 入力
+# 輸入
 N, M = map(int, input().split())
 A = [ None ] * M
 B = [ None ] * M
 for i in range(M):
 	A[i], B[i] = map(int, input().split())
 
-# 隣接リストの作成
+# 製作鄰接表
 G = [ list() for i in range(N + 1) ]
 for i in range(M):
 	G[A[i]].append(B[i])
 	G[B[i]].append(A[i])
 
-# 深さ優先探索の初期化
+# 深度優先搜尋的初始化
 visited = [ False ] * (N + 1)
-S = list() # スタック S を定義
+S = list() # 定義堆疊 S 
 visited[1] = True
-S.append(1) # S に 1 を追加
+S.append(1) # S 追加 1
 
-# 深さ優先探索
+# 深度優先搜尋
 while len(S) >= 1:
-	pos = S.pop() # S の先頭を調べ、これを取り出す
+	pos = S.pop() # 調查 S 的開頭並將之取出
 	for nex in G[pos]:
 		if visited[nex] == False:
 			visited[nex] = True
-			S.append(nex) # S に nex を追加
+			S.append(nex) # 追加 nex 至 S
 
-# 連結かどうかの判定（answer = true のとき連結）
+# 判定是否連通（answer = true 時為連通）
 answer = True
 for i in range(1, N + 1):
 	if visited[i] == False:
