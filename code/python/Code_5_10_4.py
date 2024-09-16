@@ -1,9 +1,9 @@
-# 入力
+# 輸入
 N = int(input())
 S = input()
 
-# '(' の数 - ')' の数を depth とする
-# 途中で depth が負になったら、この時点で No
+# 令'(' 的數量-')' 的數量為depth
+# 如果 depth 在過程中變為負的話，此時為 No
 depth = 0
 flag = True
 for i in range(N):
@@ -14,7 +14,7 @@ for i in range(N):
 	if depth < 0:
 		flag = False
 
-# 最後、depth = 0 ['(' と ')' の数が同じ] であるかも追加で判定する
+# 最後，也追加判定是否 depth=0['(' 和')' 的數量相同] 
 if flag == True and depth == 0:
 	print("Yes")
 else:
