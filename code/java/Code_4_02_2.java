@@ -3,7 +3,7 @@ import java.io.*;
 
 class Code_4_02_2 {
 	public static void main(String[] args) throws IOException {
-		// 入力（高速な入出力のため、Scanner の代わりに BufferedReader を使っています）
+		// 輸入（由於是高速的輸入輸出，使用 BufferedReader 代替 Scanner）
 		BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		st = new StringTokenizer(buff.readLine());
@@ -19,7 +19,7 @@ class Code_4_02_2 {
 			X[i] = Integer.parseInt(st.nextToken());
 		}
 		
-		// 階差の計算
+		// 階差的計算
 		int[] B = new int[N + 2];
 		for (int i = 1; i <= N + 1; i++) {
 			B[i] = 0;
@@ -29,7 +29,7 @@ class Code_4_02_2 {
 			B[R[i] + 1] -= X[i];
 		}
 		
-		// 答えを計算して出力
+		// 計算並輸出答案
 		String answer = "";
 		for (int i = 2; i <= N; i++) {
 			if (B[i] > 0) answer += "<";
