@@ -13,7 +13,7 @@ class Code_5_09_2 {
 		}
 		
 		// 模擬電影的選擇方法
-		// 可觀看電影的結束時間最小值 minEndtime は、最初是設定成像 1000000 (以 INF 設定）這樣不可能的值
+		// 可觀看電影的結束時間最小值 minEndtime ，最初是設定成像 1000000 (以 INF 設定）這樣不可能的值
 		final int INF = 1000000;
 		int currentTime = 0; // currentTime 為現在時間（之前看完的電影的結束時間）
 		int answer = 0;
