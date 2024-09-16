@@ -1,11 +1,11 @@
-# 入力
+# 輸入
 N, X = map(int, input().split())
 A = list(map(int, input().split()))
 
-# 配列のソート
+# 陣列的排序
 A.sort()
 
-# 二分探索
+# 二元搜尋
 answer = "No"
 left, right = 0, N - 1
 while left <= right:
@@ -14,11 +14,11 @@ while left <= right:
 		answer = "Yes"
 		break
 	if A[mid] > X:
-		# 探索範囲を前半部分に絞る
+		# 將搜尋範圍縮小到前半部分
 		right = mid - 1
 	if A[mid] < X:
-		# 探索範囲を後半部分に絞る
+		# 將搜尋範圍縮小到後半部分
 		left = mid + 1
 
-# 答えの出力
+# 輸出答案
 print(answer)
