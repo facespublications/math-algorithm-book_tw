@@ -2,7 +2,7 @@ import java.util.*;
 
 class Code_5_02_1 {
 	public static void main(String[] args) {
-		// 注意：以下のプログラムは N >= 1 で正しく動作します。N = 0 では答えは「1」となるので、また別の場合分けをする必要があります。
+		// 注意：以下的程式需要 N >= 1 才能正確動作。N = 0 會使答案為「1」，需要另外分開處理。
 		Scanner sc = new Scanner(System.in);
 		long N = sc.nextLong();
 		if (N % 4 == 1) {
