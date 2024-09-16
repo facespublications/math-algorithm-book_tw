@@ -1,8 +1,8 @@
-# 2 以上の整数 N に対し、N が素数であれば true、素数でなければ false を返す関数
+# 設 N 為 2 以上整數，若 N 為質數則返回 true，若不是質數則返回 false 的函式
 def isprime(N):
 	for i in range(2, N):
 		if N % i == 0:
-			return False # N が i で割り切れた場合、この時点で素数ではないと分かる
+			return False # N 被 i 整除時，此時可知不是質數
 	return True
 
 N = int(input())
