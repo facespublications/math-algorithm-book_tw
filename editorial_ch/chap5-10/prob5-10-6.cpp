@@ -2,11 +2,11 @@
 #include <set>
 using namespace std;
  
-// 作為 f(m) 可能有的候選
-// 關於 set 型態，請在網路上查詢！
+// f(m) としてあり得る候補
+// set 型についてはインターネットで調べてみてください！
 set<long long> fm_cand;
  
-// 回傳 m 的各個位數乘積的函式
+// m の各桁の積を返す関数
 long long product(long long m) {
 	if (m == 0) {
 		return 0;
@@ -22,31 +22,31 @@ long long product(long long m) {
 }
 
 void func(int digit, long long m) {
-	// m 的位數為 11 位以下
-	// 注：如果用 1 填充剩餘的位數，可以假設全部都是 11 位。
+	// m の桁数は 11 桁以下
+	// 注：余った桁を 1 で埋めれば、全部 11 桁と仮定しても良い
 	if (digit == 11) {
 		fm_cand.insert(product(m));
 		return;
 	}
 	
-	// 搜尋下一位
-	// min_value 為 cur 的最後一位（為了使其單調遞增，下一位必須為比它大的值）
+	// 次の桁を探索
+	// min_value は cur の最後の桁（単調増加にするためには次の桁がそれ以上でなければならない）
 	int min_value = (m % 10);
 	for (int i = min_value; i <= 9; i++) {
-		// 10 * m + i 是在 m 之後附帶數字 i 的值
+		// 10 * m + i は m の後ろに数字 i を付けたもの
 		func(digit + 1, 10 * m + i);
 	}
 }
  
 int main() {
-	// 列舉 f(m) 的候選
+	// f(m) の候補を列挙
 	func(0, 0);
  
-	// 輸入
+	// 入力
 	long long N, B;
 	cin >> N >> B;
  
-	// 檢查是否為 m - f(m) == B
+	// m - f(m) == B になるかどうかチェック
 	long long Answer = 0;
 	for (long long fm : fm_cand) {
 		long long m = fm + B;
@@ -56,7 +56,7 @@ int main() {
 		}
 	}
  
-	// 輸出
+	// 出力
 	cout << Answer << endl;
 	return 0;
 }

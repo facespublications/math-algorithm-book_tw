@@ -1,7 +1,7 @@
-# 輸入
+# 入力
 N = int(input())
 
-# 求出答案
+# 答えを求める
 mod = 1000000007
 val = N * (N + 1) // 2
 print(val * val % mod)

@@ -2,7 +2,7 @@ import java.util.*;
 
 class Main {
 	public static void main(String[] args) {
-		// 輸入
+		// 入力
 		Scanner sc = new Scanner(System.in);
 		long A = sc.nextLong();
 		long B = sc.nextLong();
@@ -14,9 +14,9 @@ class Main {
 		long E = B * (B + 1) / 2; E %= mod;
 		long F = C * (C + 1) / 2; F %= mod;
 		
-		// 輸出答案
-		// 即使在此計算 (D * E * F) % mod ，可能在途中處理到 10^27 
-		// 因此，注意即使是 long long 型態也會發生溢出！
+		// 答えを出力
+		// ここで (D * E * F) % mod にしても、途中で 10^27 を扱う可能性がある
+		// そのため、long long 型でもオーバーフローすることに注意！
 		System.out.println((D * E % mod) * F % mod);
 	}
 }

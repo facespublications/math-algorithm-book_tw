@@ -2,15 +2,15 @@ import java.util.*;
 
 class Main {
 	public static void main(String[] args) {
-		// 輸入
+		// 入力
 		Scanner sc = new Scanner(System.in);
 		long N = sc.nextLong();
 		long B = sc.nextLong();
 		
-		// 列舉各個位數乘積的候選
+		// 各桁の積の候補を列挙
 		func(0, 0);
 		
-		// 檢查是否為 m - f(m) == B
+		// m - f(m) == B になるかどうかチェック
 		long Answer = 0;
 		for (long fm : fm_cand) {
 			long m = fm + B;
@@ -20,29 +20,29 @@ class Main {
 			}
 		}
 		
-		// 輸出
+		// 出力
 		System.out.println(Answer);
 	}
 	
 	static Set<Long> fm_cand = new TreeSet<Long>();
 	
 	static void func(int digit, long m) {
-		// 位數為 11 位時，可以中止
-		// 注：如果用 1 填充剩餘的位數，可以假設全部都是 11 位。
+		// 桁数は 11 桁のときに打ち切って良い
+		// 注：余った桁を 1 で埋めれば、全部 11 桁と仮定しても良い
 		if (digit == 11) {
 			fm_cand.add(product(m));
 			return;
 		}
 		
-		// 搜尋下一位
-		// min_value 為 cur 的最後一位（為了使其單調遞增，下一位必須為比它大的值）
+		// 次の桁を探索
+		// min_value は cur の最後の桁（単調増加にするためには次の桁がそれ以上でなければならない）
 		int min_value = (int)(m % 10);
 		for (int i = min_value; i <= 9; i++) {
 			func(digit + 1, 10L * m + 1L * i);
 		}
 	}
 	
-	// 回傳 m 的各個位數乘積的函式
+	// m の各桁の積を返す関数
 	static long product(long m) {
 		// m = 0 
 		if (m == 0) {

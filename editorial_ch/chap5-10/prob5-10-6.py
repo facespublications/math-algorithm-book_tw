@@ -1,4 +1,4 @@
-# 回傳整數 m 的各個位數乘積的函式
+# 整数 m の各桁の積を返す関数
 def product(m):
 	if m == 0:
 		return 0
@@ -8,13 +8,13 @@ def product(m):
 		m //= 10
 	return ans
 
-# 將各個位數乘積的候選的集合回傳的函式
+# 各桁の積の候補の集合を返す関数
 def func(digit, m):
 	if digit == 11:
 		return {product(m)}
 	
-	# 搜尋下一位
-	# min_value 為 cur 的最後一位（為了使其單調遞增，下一位必須為比它大的值）
+	# 次の桁を探索
+	# min_value は cur の最後の桁（単調増加にするためには次の桁がそれ以上でなければならない）
 	min_value = m % 10
 	ret = set()
 	for i in range(min_value, 10):
@@ -23,19 +23,19 @@ def func(digit, m):
 			ret.add(j)
 	return ret
 
-# 輸入
+# 入力
 N, B = map(int, input().split())
 
-# 列舉各個位數乘積的候選
+# 各桁の積の候補を列挙
 fm_cand = func(0, 0)
 
-# 檢查是否為 m - f(m) = B
+# m - f(m) = B になるかどうかチェック
 Answer = 0
 for fm in fm_cand:
-	m = fm + B # 從各個位數的乘積推導之 m 的值
-	prod_m = product(m) # 本來的 f(m) 的值
+	m = fm + B # 各桁の積から導かれる m の値
+	prod_m = product(m) # 本来の f(m) の値
 	if m - prod_m == B and m <= N:
 		Answer += 1
 
-# 輸出
+# 出力
 print(Answer)

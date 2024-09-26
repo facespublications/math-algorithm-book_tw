@@ -2,19 +2,19 @@
 #include <stdlib.h>
 
 int compare_values(const void* a, const void* b) {
-	// 當 a 在前面時 回傳負值
-	// 當 b 在前面時 回傳正值
-	// 當 a 與 b 為相等的值時回傳 0 的函式
+	// a の方が前に来るとき 負の値
+	// b の方が前に来るとき 正の値
+	// a と b が等しい値のとき 0 を返す関数
 	if (*(long long*)a < *(long long*)b) return -1;
 	if (*(long long*)a > *(long long*)b) return +1;
 	return 0;
 }
 
-// 各個位數乘積的候選
+// 各桁の積の候補
 int cand_size = 0;
 long long fm_cand[10000000];
 
-// 回傳 m 的各個位數乘積的函式
+// m の各桁の積を返す関数
 long long product(long long m) {
 	long long ans = 1;
 	if (m == 0) ans = 0;
@@ -25,7 +25,7 @@ long long product(long long m) {
 	return ans;
 }
 
-// m 的位數為 11 位以下
+// m の桁数は 11 桁以下
 void func(int digit, long long m) {
 	if (digit == 11) {
 		fm_cand[cand_size] = product(m);
@@ -33,8 +33,8 @@ void func(int digit, long long m) {
 		return;
 	}
  
-	// 搜尋下一位
-	// min_value 為 cur 的最後一位（為了使其單調遞增，下一位必須為比它大的值）
+	// 次の桁を探索
+	// min_value は cur の最後の桁（単調増加にするためには次の桁がそれ以上でなければならない）
 	int min_value = (m % 10);
 	for (int i = min_value; i <= 9; i++) {
 		func(digit + 1, 10LL * m + 1LL * i);
@@ -42,23 +42,23 @@ void func(int digit, long long m) {
 }
  
 int main() {
-	// 列舉 f(m) 的候選
+	// f(m) の候補を列挙
 	for (int i = 0; i <= 9; i++) {
 		func(1, i);
 	}
  
-	// 將 fm_cand 排序
+	// fm_cand をソートする
 	qsort(fm_cand, cand_size, sizeof(long long), compare_values);
  
-	// 輸入
+	// 入力
 	long long N, B;
 	scanf("%lld%lld", &N, &B);
  
-	// 檢查是否為 m - f(m) = B
+	// m - f(m) = B になるかどうかチェック
 	long long Answer = 0;
 	for (int i = 0; i < cand_size; i++) {
 		if (i >= 1 && fm_cand[i - 1] == fm_cand[i]) {
-			// 不再檢查之前檢查過的元素
+			// 前に調べたことがある要素は調べない
 			continue;
 		}
 		long long m = fm_cand[i] + B;
@@ -68,7 +68,7 @@ int main() {
 		}
 	}
  
-	// 輸出
+	// 出力
 	printf("%lld\n", Answer);
 	return 0;
 }

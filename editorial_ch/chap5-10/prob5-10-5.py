@@ -1,14 +1,14 @@
 import sys
 
-# 輸入
+# 入力
 a, b, c = map(int, input().split())
 
-# 區分 c = 1 時的狀況
+# c = 1 のときの場合分け
 if c == 1:
 	print("No")
 	sys.exit()
 
-# 計算右邊（c 的 b 次方）
+# 右辺の計算（c の b 乗）
 v = 1
 for i in range(b):
 	v *= c
@@ -16,5 +16,5 @@ for i in range(b):
 		print("Yes")
 		sys.exit()
 
-# 輸出（No 的情況）
+# 出力（No の場合）
 print("No")
